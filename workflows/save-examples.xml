@@ -1,0 +1,7 @@
+<workflow>
+    <mark-row-updated dataset="examples"/>
+    <atomic-commit>
+        <dataset name="examples"/>
+    </atomic-commit> 
+    <refresh-dataset name="examples" query="get-all"/>   
+</workflow>

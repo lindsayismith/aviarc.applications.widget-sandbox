@@ -1,0 +1,14 @@
+<dataset name="backing-dataset">
+  <row>
+      <field name="id" value="eg1"/>
+      <field name="title" value="A Button with an onclick handlers"/>
+      <field name="description" value="In this example, a button is displayed with an inline event attached that shows an alert message."/>
+      <field name="xml" value="&lt;button width=&quot;200&quot; height=&quot;26&quot; left=&quot;176&quot; top=&quot;111&quot; label=&quot;I'm a Button. Try clicking me&quot; >&#xa;      &lt;action:when event=&quot;onclick&quot; xmlns:action=&quot;urn:aviarc:widget:com.aviarc.toronto.widget.core.action:1&quot;>&#xa;             &lt;action:alert message=&quot;I was clicked&quot;/>&#xa;      &lt;/action:when>&#xa;&lt;/button>"/>
+  </row>
+  <row>
+      <field name="id" value="eg2"/>
+      <field name="title" value="Raised and inset group-boxes"/>
+      <field name="description" value="A group box is given the raised class and a title, and within it another group-box is positioned using the edge offsets"/>
+      <field name="xml" value="&lt;group-box left=&quot;20&quot; top=&quot;20&quot; height=&quot;300&quot; width=&quot;500&quot; class=&quot;raised&quot; title=&quot;Title goes here&quot;>&#xa;      &lt;group-box left=&quot;10&quot; right=&quot;10&quot; top=&quot;30&quot; bottom=&quot;10&quot; />&#xa;&lt;/group-box>"/>
+  </row>
+</dataset>

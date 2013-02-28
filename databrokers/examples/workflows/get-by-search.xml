@@ -1,0 +1,15 @@
+<workflow xmlns:string="urn:aviarc:xmlcommand:com.aviarc.string">
+    <dataset-iterator dataset="{$context.internal-dataset-name}">    
+        <if>
+            <or>
+                <string:contains value="{${$context.internal-dataset-name}.name}" char-sequence="{$parameters.search}"/>
+                <string:contains value="{${$context.internal-dataset-name}.name}" char-sequence="{$parameters.search}"/>
+            </or>
+            <then>
+                <create-row dataset="{$context.populate-dataset-name}"/>
+                <copy-row to-dataset="{$context.populate-dataset-name}" from-dataset="{$context.internal-dataset-name}"/>
+            </then>
+        </if>
+    </dataset-iterator>
+</workflow>
+

@@ -1,0 +1,12 @@
+<workflow>
+    <dataset-iterator dataset="{$context.internal-dataset-name}">
+        <if>
+            <condition test="equal" value1="{${$context.internal-dataset-name}.uuid}" value2="{$parameters.uuid}" />
+            <then>
+                <create-row dataset="{$context.populate-dataset-name}"/>
+                <copy-row to-dataset="{$context.populate-dataset-name}" from-dataset="{$context.internal-dataset-name}"/>
+            </then>
+        </if>
+    </dataset-iterator>
+</workflow>
+

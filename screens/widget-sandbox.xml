@@ -1,19 +1,35 @@
 <screen xmlns:action="urn:aviarc:widget:com.aviarc.toronto.widget.core.action:1" xmlns:app="urn:aviarc:widget:application">
-    <text-edit width="1000" height="140" left="30" top="20" field="test-xml.xml" multi-line="y" />
+    <text-edit width="780" height="180" left="70" top="350" field="examples.xml" multi-line="y" />
    
-    <app:screen-fragment-renderer name="screen-fragment" xml="{$test-xml.xml}" width="1000" height="360" left="30" top="380" compile-results-dataset="compile-results">
+    <app:screen-fragment-renderer name="screen-fragment" xml="{$examples.xml}" width="660" height="360" left="880" top="350" compile-results-dataset="compile-results">
         
     </app:screen-fragment-renderer>
-    <button width="130" height="26" left="30" top="170" label="Reload">
+    
+    <action:when dataset-event="examples.onCurrentRowChanged">
+        <app:rerender widget="screen-fragment" />
+    </action:when>
+    
+    <button width="130" height="26" left="880" top="290" label="Reload">
         <action:when event="onclick">
-            <app:rerender widget="screen-fragment"/>
+            <app:rerender widget="screen-fragment" />
         </action:when>
     </button>
-    <record-table width="1000" height="150" left="30" top="210" dataset="compile-results">
+    <record-table width="780" height="150" left="70" top="558" dataset="compile-results">
         <column width="5" display-field="type" header="Type" />
         <column width="80" display-field="message" header="message" />
         <column width="20" display-field="position" header="Position" />
-    </record-table>
+    </record-table>    
+        
+    <group-box width="1480" height="230" left="67" top="34">
+        <record-table width="620" height="170" left="26" top="20" dataset="examples">
+            <column width="0" display-field="title" header="Title" />
+        </record-table>
+        <dynamic-text width="620" height="160" left="683" top="26" field="examples.description" />
+        <button width="100" height="26" left="1343" top="156" label="Save" action="save-examples">
+            
+        </button>
+        
+    </group-box>
         
   
 </screen>

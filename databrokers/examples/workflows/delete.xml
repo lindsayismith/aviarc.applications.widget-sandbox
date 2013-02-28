@@ -1,0 +1,11 @@
+<workflow>
+    <debug text="INSIDE THE DELETE"/>
+    <debug-all/>
+    <set-current-row-by-field field="uuid" dataset="{$context.internal-dataset-name}" value="{${$context.commit-row}.uuid}"/>
+    <if>
+        <condition test="equal" value1="{${$context.internal-dataset-name}.uuid}" value2="{${$context.commit-row}.uuid}"/>
+        <then>
+            <delete-row dataset="{$context.internal-dataset-name}"/>
+        </then>
+    </if>
+</workflow>

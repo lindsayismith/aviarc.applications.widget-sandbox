@@ -1,0 +1,13 @@
+<workflow xmlns:dataset="urn:aviarc:xmlcommand:com.aviarc.dataset">
+    <debug text="INSIDE THE UPDATE"/>
+    <debug-all/>
+    <set-current-row-by-field field="id" dataset="{$context.internal-dataset-name}" value="{${$context.commit-row}.id}"/>
+    <if>
+        <condition test="equal" value1="{${$context.internal-dataset-name}.id}" value2="{${$context.commit-row}.id}"/>
+        <then>
+            <dataset:field-iterator dataset="{$context.commit-row}" value-field="var.value-field" name-field="var.field-name">
+                <set-field field="{$context.internal-dataset-name}.{$var.field-name}" value="{$var.value-field}" />
+            </dataset:field-iterator>
+        </then>
+    </if>
+</workflow>

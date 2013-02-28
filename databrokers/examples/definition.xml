@@ -1,0 +1,28 @@
+<databroker factory-class="com.aviarc.framework.databroker.datasetfile.DatasetFileDataBrokerFactoryImpl">
+        <backing-dataset path="backing-dataset.xml" />
+        <populate-operation name="get-all">
+             <dataset-result file="backing-dataset.xml"/>
+        </populate-operation>
+        
+       <!-- <populate-operation name="get-by-uuid">
+             <workflow-result workflow="workflows/get-by-uuid"/>
+      
+             <parameters>
+                 <parameter name="uuid" />
+             </parameters>
+        </populate-operation>
+        
+        <populate-operation name="get-by-search">
+             <workflow-result workflow="workflows/get-by-search"/>
+      
+             <parameters>
+                 <parameter name="search" />
+             </parameters>
+        </populate-operation>
+        -->
+        <store-dataset-changes>
+            <create workflow="workflows/create" />
+            <update workflow="workflows/update" />
+            <delete workflow="workflows/delete" />
+        </store-dataset-changes>
+</databroker>
