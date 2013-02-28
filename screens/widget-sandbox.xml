@@ -1,0 +1,11 @@
+<screen xmlns:action="urn:aviarc:widget:com.aviarc.toronto.widget.core.action:1" xmlns:app="urn:aviarc:widget:application">
+    <text-edit width="1000" height="170" left="45" top="56" field="test-xml.xml" />
+   
+    <app:screen-fragment-renderer xml="{$test-xml.xml}" width="990" height="210" left="50" top="284">
+        
+    </app:screen-fragment-renderer>
+    <button width="130" height="26" left="50" top="240" label="Redisplay" action="Redisplay">
+        
+    </button>
+  
+</screen>

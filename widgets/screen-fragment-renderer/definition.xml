@@ -1,0 +1,10 @@
+<widget name="screen-fragment-renderer"
+        factory-class="com.aviarc.framework.toronto.widget.DefaultWidgetProviderFactoryImpl"
+        rendered-node-factory="widgetsandbox.widgets.ScreenFragmentRenderer"
+        container-positioning="y">
+
+    <attributes>
+        <attribute name="xml" mandatory="y"/>        
+    </attributes>
+    <children allowed="y"/>
+</widget>
