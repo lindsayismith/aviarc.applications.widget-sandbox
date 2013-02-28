@@ -7,9 +7,10 @@ import org.w3c.dom.Node;
 
 import widgetsandbox.widgets.ScreenFragmentCompiler.FragmentCompilationResult;
 
-import com.aviarc.core.dataset.DatasetFieldName;
-import com.aviarc.core.dataset.DatasetStack;
+import com.aviarc.core.dataset.Dataset;
+import com.aviarc.core.dataset.DatasetRow;
 import com.aviarc.core.diagnostics.ResourceCompilationInfo;
+import com.aviarc.core.diagnostics.ResourceDiagnostic;
 import com.aviarc.framework.toronto.screen.CompiledWidget;
 import com.aviarc.framework.toronto.screen.RenderedNode;
 import com.aviarc.framework.toronto.screen.ScreenRenderingContext;
@@ -39,6 +40,12 @@ public class ScreenFragmentRenderer implements DefaultRenderedNodeFactory {
                                            ScreenRenderingContext renderingContext) {
         String xml = elementContext.getAttribute("xml").getResolvedValue();
         
+        String resultsDatasetName = elementContext.getAttribute("compile-results-dataset").getResolvedValue();
+        
+        Dataset resultsDataset = renderingContext.getCurrentState().getApplicationState().getDatasetStack().findDataset(resultsDatasetName);
+        resultsDataset.deleteAllRows();
+        
+        
         ScreenFragmentCompiler compiler = new ScreenFragmentCompiler(renderingContext.getCurrentState().getAviarc(),
                                                                       renderingContext.getCurrentState().getCurrentApplication());
         
@@ -51,6 +58,20 @@ public class ScreenFragmentRenderer implements DefaultRenderedNodeFactory {
         RenderedNode ourNode = new ScreenFragmentRendererImpl(elementContext, 
                                                               renderingContext, 
                                                               _definition);
+        
+        DatasetRow dsRow;
+        for (ResourceDiagnostic compileItem : compileInfo.getErrors()) {
+            dsRow = resultsDataset.createRow();
+            dsRow.setField("type", "error");
+            dsRow.setField("message", compileItem.getMessage());
+            dsRow.setField("position", compileItem.getPosition());
+        }
+        for (ResourceDiagnostic compileItem : compileInfo.getWarnings()) {
+            dsRow = resultsDataset.createRow();
+            dsRow.setField("type", "warning");
+            dsRow.setField("message", compileItem.getMessage());
+            dsRow.setField("position", compileItem.getPosition());
+        }
         
         // widget might be null;
         if (widget != null) {

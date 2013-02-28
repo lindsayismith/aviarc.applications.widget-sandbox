@@ -1,11 +1,16 @@
 <screen xmlns:action="urn:aviarc:widget:com.aviarc.toronto.widget.core.action:1" xmlns:app="urn:aviarc:widget:application">
-    <text-edit width="1000" height="170" left="45" top="56" field="test-xml.xml" />
+    <text-edit width="1000" height="170" left="45" top="56" field="test-xml.xml" multi-line="y" />
    
-    <app:screen-fragment-renderer xml="{$test-xml.xml}" width="990" height="210" left="50" top="284">
+    <app:screen-fragment-renderer xml="{$test-xml.xml}" width="508" height="415" left="50" top="284" compile-results-dataset="compile-results">
         
     </app:screen-fragment-renderer>
     <button width="130" height="26" left="50" top="240" label="Redisplay" action="Redisplay">
         
     </button>
+    <record-table width="430" height="420" left="620" top="280" dataset="compile-results">
+        <column width="10" display-field="type" header="Type" />
+        <column width="80" display-field="message" header="message" />
+        
+    </record-table>
   
 </screen>

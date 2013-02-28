@@ -5,6 +5,7 @@
 
     <attributes>
         <attribute name="xml" mandatory="y"/>        
+        <attribute name="compile-results-dataset" mandatory="y"/>        
     </attributes>
     <children allowed="y"/>
 </widget>
