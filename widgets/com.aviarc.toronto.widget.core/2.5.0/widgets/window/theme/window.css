@@ -1,0 +1,320 @@
+/* ------------------------------
+    Toronto Window Styles
+-------------------------------*/
+iframe.$URN$_window-iframe {
+    display: none;
+}
+.$URN$_window {
+    position:absolute;
+    height:100% auto;
+}
+.$URN$_window-background {
+    position:absolute;
+    left:0;
+    right:0;
+    top:20px;
+    bottom:20px;
+    background-color: #f1f1f1;
+}
+.$URN$_window-top { 
+    position:absolute;
+    top:-5px;
+    height:30px;
+    width:100%;
+}
+.$URN$_window-bottom {
+    bottom:-8px;
+    position:absolute;
+    height:30px;
+    width:100%;
+}
+.$URN$_window-top-left,
+.$URN$_window-top-right,
+.$URN$_window-bottom-left,
+.$URN$_window-bottom-right{
+	position:absolute;
+	width:50px;
+	height:100%;
+}
+.$URN$_window-top-left{
+	top:0;
+	left:-6px;
+	background:url(window.png) 0 0 no-repeat;
+}
+.$URN$_window-top-right {
+	top:0;
+	right:-8px;
+	background:url(window.png) -119px 0 no-repeat;
+}
+.$URN$_window-bottom-left {
+	bottom:0;
+	left:-6px;
+	background:url(window.png) 0 -90px no-repeat;
+}
+.$URN$_window-bottom-right {
+	bottom:0;
+	right:-8px;
+	background:url(window.png) -119px -90px no-repeat;
+}
+.$URN$_window-top-middle,
+.$URN$_window-bottom-middle{
+    position:absolute;
+    height:30px; /* I had issues in ie6 using 100%.$URN$_.. no idea why */
+    left:44px;
+    right:42px;
+}
+.$URN$_window-top-middle {
+	top:0;  
+	background:url(window_hrep.png) 0 0 repeat-x;
+}
+.$URN$_window-bottom-middle{
+	bottom:0;
+	background:url(window_hrep.png) 0 -90px repeat-x;
+}
+.$URN$_window-bottom-middle dl {
+    margin:0 0 0 -40px;
+    height:1em;
+    font-size:0.85em;
+}
+.$URN$_window-bottom-middle dt, 
+.$URN$_window-bottom-middle dd {
+	font:status-bar;
+	float:left;
+	display:block;
+	position:relative;
+	margin:0;
+	padding:0 0.5em;
+	-moz-opacity: 0.5;
+	opacity: .50;
+	filter: alpha(opacity=50);
+}
+.$URN$_window-bottom-middle dt {
+    white-space: nowrap;
+    overflow: hidden;
+    margin-right: -4em;
+}
+.$URN$_window-top-middle h5 {
+	position:absolute;
+	top:11px;
+	left:0;
+	width:auto;
+	height:25px;
+	margin:0 0 0 -15px;
+	color:#000;
+	font-size: 1.1em;
+    overflow: hidden;
+    white-space: nowrap;
+}
+/* Top left logo */
+.$URN$_window-actions, 
+.$URN$_window-icon {
+    position:absolute;
+    height:23px;
+    width:100%;
+    cursor:pointer;
+}
+.$URN$_window-actions{cursor:move;}
+.$URN$_window-icon {
+    position:relative;
+    top:5px;
+    left:0;
+    width:23px;
+    float:left;
+    text-indent:-9999px;
+    background:none;
+}
+div.$URN$_window-icon {
+    display:block;
+    float:left;
+    height:23px;
+    width:23px;
+    background:url(window_actions.png) 0 0  no-repeat;
+}
+div.$URN$_window-icon:hover {
+    background:url(window_actions.png) 0 -23px  no-repeat;
+}
+/*  Resizer  */
+.$URN$_window-bottom-right div {
+	position:absolute;
+	bottom:9px;
+	right:8px;
+	width:21px;
+	height:21px;
+	background:url(window_actions.png) -110px 0 no-repeat;
+}
+.$URN$_window-bottom-right div:hover {
+	cursor: nw-resize;
+	background: url(window_actions.png) -110px -23px no-repeat;
+}
+/* ------------------------------
+	Box Content Starts Here
+-------------------------------*/
+.$URN$_window-middle {
+    position: absolute;
+    left:0;
+    right:0;
+    top:25px;
+    bottom:22px;
+}
+.$URN$_window-content {
+    position: absolute;
+    top:0;       
+    left:0;
+	bottom:0;
+    right:0;
+    overflow:auto;
+	margin:0;
+}
+.$URN$_window-middle-left,
+.$URN$_window-middle-right{	
+    position:absolute;
+    width:10px;
+    height:100%;
+}
+.$URN$_window-middle-left{
+    left:-6px;
+    background:url(window_vrep.png) 0 0 repeat-y;
+}
+.$URN$_window-middle-right{
+    right:-8px;
+    background:url(window_vrep.png) -159px 0 repeat-y;
+}
+
+div.$URN$_window-buttons {
+    margin:8px 1px 0 0;
+}
+div.$URN$_window-buttons div {
+    width:22px;
+    height:22px;
+    float:right;
+    cursor:pointer;
+}
+div.$URN$_window-button-close{
+    background:url(window_actions.png) -83px -2px no-repeat;
+}
+div.$URN$_window-button-close-disabled{
+    background:url(window_actions.png) -83px -48px no-repeat;
+    cursor: default;
+}
+div:hover.$URN$_window-button-close{
+    background:url(window_actions.png) -83px -25px no-repeat;
+}
+div.$URN$_window-button-minimize{
+    background:url(window_actions.png) -28px -2px no-repeat;
+}
+div:hover.$URN$_window-button-minimize{
+    background:url(window_actions.png) -28px -25px no-repeat;
+}
+div.$URN$_window-button-maximize{
+    background:url(window_actions.png) -56px -2px no-repeat;
+}
+div:hover.$URN$_window-button-maximize{
+    background:url(window_actions.png) -56px -25px no-repeat;
+}
+.$URN$_window-resize-proxy {
+   position: absolute;
+   top: 3px;
+   left: 5px;
+   bottom: 8px;
+   right: 5px;
+    /**
+    moz-opacity: 0.5;
+    opacity:0.5;
+    filter: alpha(opacity=50);
+    background-color: white; 
+    background-color: blue; **/
+   border:1px dashed black;
+    z-index: 50000;
+}
+.$URN$_window-event {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background:white;
+    z-index:200000;
+    moz-opacity: 0;
+    opacity:0;
+    filter: alpha(opacity=0);
+}
+.$URN$_window-drag-proxy {
+	position: absolute;
+	background:none;
+	z-index:50000;
+    border: 1px dashed black;
+/*moz-opacity: 0.5;
+	opacity:0.5;
+	filter: alpha(opacity=50);*/
+}
+
+
+/*** ----------------Custom Classes Begin ---------------------------------------------------------------- ***/
+
+/* "wiki" a green window design used for wiki pin notes popups */
+.$URN$_window-top-left-wiki,
+.$URN$_window-top-right-wiki,
+.$URN$_window-bottom-left-wiki,
+.$URN$_window-bottom-right-wiki {background-image: url(wiki/window.png);}
+.$URN$_window-top-middle-wiki,
+.$URN$_window-bottom-middle-wiki {background-image: url(wiki/window_hrep.png);}
+.$URN$_window-middle-left-wiki,
+.$URN$_window-middle-right-wiki {background-image: url(wiki/window_vrep.png);}
+.$URN$_window-background-wiki {background: #D7F0BD;}
+.$URN$_window-bottom-left-wiki {width: 85px;}
+.$URN$_window-bottom-middle-wiki {left: 79px;}
+.$URN$_window-bottom-middle-wiki dl {margin-left: -18px;}
+div.$URN$_window-buttons-wiki div.$URN$_window-button-close {background:url(window_actions.png) -28px -2px no-repeat;}
+div.$URN$_window-buttons-wiki div.$URN$_window-button-close-disabled {
+	background:url(window_actions.png) -28px -48px no-repeat;
+	cursor: default;
+}
+div.$URN$_window-buttons-wiki div:hover.$URN$_window-button-close {
+    background:url(window_actions.png) -28px -25px no-repeat;
+}
+
+/* "blurred" - make window semitransparent when inactive
+	Note - this effect causes problems in <=IE7, as the alpha transparencies start showing as the matt colour */
+.$URN$_window-blurred {
+    opacity: 0.5;
+    moz-opacity: 0.5;
+    filter: alpha(opacity=50);
+    cursor: default;
+}
+
+/* "non-interactive" theme disabled cursors on header etc */
+.$URN$_window-icon-noninteractive,
+div.$URN$_window-buttons-noninteractive div,
+.$URN$_window-actions-noninteractive,
+.$URN$_window-icon-noninteractive {
+    cursor: default;
+}
+.$URN$_window-buttons-noninteractive .$URN$_window-button-close,
+.$URN$_window-buttons-noninteractive .$URN$_window-button-close-disabled,
+.$URN$_window-buttons-noninteractive .$URN$_window-button-minimize,
+.$URN$_window-buttons-noninteractive .$URN$_window-button-minimize-disabled,
+.$URN$_window-buttons-noninteractive .$URN$_window-button-maximize,
+.$URN$_window-buttons-noninteractive .$URN$_window-button-maximize-disabled {
+    display: none;
+}
+
+/* "search-icon" - displays a search icon as the windoe icon in the top left - image hyjacked from button widget*/
+div.$URN$_window-icon-search-icon,
+div.$URN$_window-icon-search-icon:hover {
+    margin: 4px 0 0 4px;
+    background:url(../Revision2:button/label_icons.png) 0 -128px  no-repeat;
+}
+
+/* "debugger-icon" - displays a search icon as the windoe icon in the top left - image hyjacked from button widget */
+div.$URN$_window-icon-debugger-icon,
+div.$URN$_window-icon-debugger-icon:hover {
+    background:url(../Revision2:button/label_icons.png) 0 -80px  no-repeat;
+    margin: 4px 0 0 4px;
+    height: 16px;
+    width: 16px;
+}
+div.$URN$_window-icon-debugger-icon:hover {
+    background-position: 0 -64px;
+}
+
+/*** ----------------Custom Classes End ---------------------------------------------------------------- ***/

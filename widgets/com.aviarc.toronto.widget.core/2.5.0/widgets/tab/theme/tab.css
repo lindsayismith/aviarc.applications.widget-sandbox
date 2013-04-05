@@ -1,0 +1,288 @@
+/**
+   Padding of 5 plus height of 25 makes the 30px
+*/
+ul.$URN$_tabset-tablist li a.$URN$_tab-anchor,
+ul.$URN$_tabset-tablist li span.$URN$_tab-span {
+    position:relative;
+    display:block;
+    color:#000;
+    margin:0 15px 0 2px;
+    padding:6px 5px 0 5px;
+    height:25px;
+    background:url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.5.0:tabset/tabs_raised_hrep.png) 0 0 repeat-x;
+    white-space:nowrap;
+}
+
+ul.$URN$_tabset-tablist li a.$URN$_tab-anchor {
+    /*background-color: red;*/
+    text-decoration: none;
+}
+
+
+/* Appropriate mouse-over cursors.  Inactive shows clickability, disabled and active do not */
+ul.$URN$_tabset-tablist li.$URN$_tab-inactive a,
+ul.$URN$_tabset-tablist li.$URN$_tab-inactive span,
+ul.$URN$_tabset-tablist li.$URN$_tab-disabled a,
+ul.$URN$_tabset-tablist li.$URN$_tab-disabled span,
+ul.$URN$_tabset-tablist li.$URN$_tab-active a,
+ul.$URN$_tabset-tablist li.$URN$_tab-active span {
+    unselectable: on;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+}
+ul.$URN$_tabset-tablist li.$URN$_tab-inactive a,
+ul.$URN$_tabset-tablist li.$URN$_tab-inactive span {
+    cursor: pointer;
+    cursor: hand;
+}
+ul.$URN$_tabset-tablist li.$URN$_tab-disabled a,
+ul.$URN$_tabset-tablist li.$URN$_tab-disabled span,
+ul.$URN$_tabset-tablist li.$URN$_tab-active a,
+ul.$URN$_tabset-tablist li.$URN$_tab-active span {
+    cursor: default;
+}
+
+/* Hide hidden tabs */
+ul.$URN$_tabset-tablist li.$URN$_tab-hidden {
+    display:none; 
+}
+
+/**
+   The left and right bars
+*/
+ul.$URN$_tabset-tablist li span.tab-left,
+ul.$URN$_tabset-tablist li span.tab-right {
+    position:absolute;
+    bottom:0;
+    top:0;
+    width:8px;
+    background:url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.5.0:tabset/tabs.png) 0 0 no-repeat;
+}
+ul.$URN$_tabset-tablist li span.tab-left {
+    left:-8px;
+}
+ul.$URN$_tabset-tablist li span.tab-right {
+    background:url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.5.0:tabset/tabs.png) -23px 0 no-repeat;
+    right:-8px;
+}
+
+/**
+   Active tab image
+*/
+ul.$URN$_tabset-tablist li.$URN$_tab-active span.$URN$_tab-span {
+    font-weight:bold;
+    background:url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.5.0:tabset/tabs_raised_hrep.png) 0 -90px repeat-x;
+}
+
+
+/**
+   Disabled tab image
+*/
+ul.$URN$_tabset-tablist li.$URN$_tab-disabled span.$URN$_tab-span {
+    color:#999;
+    background:url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.5.0:tabset/tabs_raised_hrep.png) 0 -60px repeat-x;
+}
+
+/**
+   Spacer label used to make the inactive part the same width
+   as the bold active label
+*/
+ul.$URN$_tabset-tablist span.tab-active-label-spacer {
+    font-weight: bold;
+    visibility: hidden;
+}
+/**
+   Inactive label is positioned absolutely, centered over the invisible
+   spacer label
+*/
+ul.$URN$_tabset-tablist span.tab-inactive-label {
+    margin-left: 0;
+    position: absolute;
+    width: auto;
+    text-align: center;
+}
+
+/** Hover for inactive tabs **/
+.$URN$_tabset-inactive-tab-row li.$URN$_tab-inactive a:hover{
+    background:url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.5.0:tabset/tabs_raised_hrep.png) 0 -30px repeat-x;
+}
+.$URN$_tabset-inactive-tab-row li.$URN$_tab-inactive a:hover span.tab-left {
+    background:url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.5.0:tabset/tabs.png) 0 -30px no-repeat;
+}
+.$URN$_tabset-inactive-tab-row li.$URN$_tab-inactive a:hover span.tab-right {
+    background:url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.5.0:tabset/tabs.png) -23px -30px no-repeat;
+}
+ul.$URN$_tabset-tablist li.$URN$_tab-active span.tab-right{
+    background:url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.5.0:tabset/tabs.png) -23px -90px no-repeat;
+}
+ul.$URN$_tabset-tablist li.$URN$_tab-active span.tab-left{
+    background:url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.5.0:tabset/tabs.png) 0 -90px no-repeat;
+}
+ul.$URN$_tabset-tablist li.$URN$_tab-disabled span.tab-right{
+    background:url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.5.0:tabset/tabs.png) -23px -60px no-repeat;
+}
+ul.$URN$_tabset-tablist li.$URN$_tab-disabled span.tab-left{
+    background:url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.5.0:tabset/tabs.png) 0 -60px no-repeat;
+}
+
+/** Show/hide parts based on class of li **/
+ul.$URN$_tabset-tablist li.$URN$_tab-inactive span.$URN$_tab-span {
+    display: none;
+}
+ul.$URN$_tabset-tablist li.$URN$_tab-inactive a.$URN$_tab-anchor {
+    display: block;
+}
+ul.$URN$_tabset-tablist li.$URN$_tab-disabled span.$URN$_tab-span {
+    display: block;
+}
+ul.$URN$_tabset-tablist li.$URN$_tab-disabled a.$URN$_tab-anchor {
+    display: none;
+}
+ul.$URN$_tabset-tablist li.$URN$_tab-active span.$URN$_tab-span {
+    display: block;
+}
+ul.$URN$_tabset-tablist li.$URN$_tab-active a.$URN$_tab-anchor {
+    display: none;
+}
+
+/**
+   In the active row, only active tabs are shown. The rest
+   are placeholders
+*/
+.$URN$_tabset-active-tab-row li.$URN$_tab-inactive,
+.$URN$_tabset-active-tab-row li.$URN$_tab-disabled {
+    visibility: hidden;
+    height:1px;
+}
+
+
+/**
+   In the inactive row, only inactive and disabled tabs are shown. The active tabs
+   are placeholders, they are displayed by the active row
+*/
+.$URN$_tabset-inactive-tab-row li.$URN$_tab-active {
+    visibility: hidden;
+    height:1px;
+}
+
+
+/** Scrolling **/
+ul.$URN$_tablist li.$URN$_tablist-scroll-left {
+    left:-10px;
+}
+ul.$URN$_tablist li.$URN$_tablist-scroll-right {
+    left:-2px;
+}
+
+
+/** Custom Classes for presenting tab label parts as icons.
+	Other Accompanying classes needed to change choice of icon image.
+ **/
+span.$URN$_tab-span-icon span.tab-label,
+a.$URN$_tab-anchor-icon span.tab-inactive-label,
+span.$URN$_tab-span-icon-left span.tab-label-left,
+a.$URN$_tab-anchor-icon-left span.tab-label-left,
+span.$URN$_tab-span-icon-right span.tab-label-right,
+a.$URN$_tab-anchor-icon-right span.tab-label-right,
+span.$URN$_tab-span-icon-right span.tab-label-right {
+	text-indent:-9999px;
+	display:block;
+	float:left;
+	width:16px;
+	height:16px;
+	margin:0 2px;
+	background:url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.5.0:button/label_icons.png) 0 0 no-repeat;
+}
+span.$URN$_tab-span-icon span.tab-label,
+a.$URN$_tab-anchor-icon span.tab-inactive-label {
+    position:relative;
+    margin-right:0;
+}
+a.$URN$_tab-anchor-icon span.tab-active-label-spacer {
+    width:1px;
+    height:1px;
+    position:absolute;
+    margin:0;
+}
+
+a.$URN$_tab-anchor-icon-left span.tab-inactive-label,
+span.$URN$_tab-span-icon-left span.tab-label {
+    position:absolute;
+    top:6px;
+    left:24px;
+    float:none;
+    margin:0 2px;
+}
+a.$URN$_tab-anchor-icon-left span.tab-active-label-spacer,
+span.$URN$_tab-span-icon-left span.tab-label {
+    top:0;
+    position:relative;
+    float:left;
+    left:0;
+    margin:0 2px;
+}
+
+a.$URN$_tab-anchor-icon-right span.tab-inactive-label,
+span.$URN$_tab-span-icon-right span.tab-label {
+    position:absolute;
+    top:6px;
+    left:6px;
+    float:none;
+    margin:0 2px;
+}
+a.$URN$_tab-anchor-icon-right span.tab-active-label-spacer,
+span.$URN$_tab-span-icon-right span.tab-label {
+    top:0;
+    position:relative;
+    float:left;
+    left:0;
+    margin:0 2px;
+}
+
+li.$URN$_tab-disabled-icon span.$URN$_tab-span-icon span.tab-label,
+li.$URN$_tab-disabled-icon-right span.$URN$_tab-span-icon-right span.tab-label-right,
+li.$URN$_tab-disabled-icon-left span.$URN$_tab-span-icon-left span.tab-label-left {
+	-moz-opacity: 0.5;
+	opacity: .50;
+	filter: alpha(opacity=50);
+}
+
+/** Custom Classes for swapping sprites on individual tab furniture
+	Custom class of "red" used for demonstration with both raised and inset
+**/
+.$URN$_tabset-body-tab-red div.$URN$_tabset-background {
+    background-color:#c95f5f;
+}
+ul.$URN$_tabset-tablist li.$URN$_tab-inactive-red span.tab-left,
+ul.$URN$_tabset-tablist li.$URN$_tab-inactive-red a:link.$URN$_tab-anchor-red span.tab-left,
+li.$URN$_tab-inactive-red a:hover.$URN$_tab-anchor-red span.tab-left,
+li.$URN$_tab-inactive-red a:focus.$URN$_tab-anchor-red span.tab-left,
+li.$URN$_tab-active-red span.$URN$_tab-span-red span.tab-left,
+ul.$URN$_tabset-tablist li.$URN$_tab-inactive-red span.tab-right,
+ul.$URN$_tabset-tablist li.$URN$_tab-inactive-red a:link.$URN$_tab-anchor-red span.tab-right,
+li.$URN$_tab-inactive-red a:hover.$URN$_tab-anchor-red span.tab-right,
+li.$URN$_tab-inactive-red a:focus.$URN$_tab-anchor-red span.tab-right,
+li.$URN$_tab-active-red span.$URN$_tab-span-red span.tab-right {
+	background-image:url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.5.0:tabset/red/tabs.png);
+}
+ul.$URN$_tabset-tablist li.$URN$_tab-inactive-red a,
+ul.$URN$_tabset-tablist li.$URN$_tab-inactive-red a:link.$URN$_tab-anchor-red,
+ul.$URN$_tabset-tablist li.$URN$_tab-inactive-red a:hover.$URN$_tab-anchor-red,
+ul.$URN$_tabset-tablist li.$URN$_tab-inactive-red a:focus.$URN$_tab-anchor-red,
+ul.$URN$_tabset-tablist li.$URN$_tab-active-red span.$URN$_tab-span-red {
+	background-image:url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.5.0:tabset/red/tabs_raised_hrep.png);
+}
+.$URN$_tabset-body-tab-red div.$URN$_tabset-body-top-left,
+.$URN$_tabset-body-tab-red div.$URN$_tabset-body-top-right,
+.$URN$_tabset-body-tab-red div.$URN$_tabset-body-bottom-left,
+.$URN$_tabset-body-tab-red div.$URN$_tabset-body-bottom-right {
+	background-image:url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.5.0:window/red/window.png);
+}
+.$URN$_tabset-body-tab-red div.$URN$_tabset-body-top-horizontal,
+.$URN$_tabset-body-tab-red div.$URN$_tabset-body-bottom-horizontal {
+	background-image:url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.5.0:window/red/window_hrep.png);
+}
+.$URN$_tabset-body-tab-red div.$URN$_tabset-body-left,
+.$URN$_tabset-body-tab-red div.$URN$_tabset-body-right {
+	background-image:url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.5.0:window/red/window_vrep.png);
+}

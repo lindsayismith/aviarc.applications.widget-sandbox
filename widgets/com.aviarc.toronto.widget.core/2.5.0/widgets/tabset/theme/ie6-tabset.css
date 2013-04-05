@@ -1,0 +1,59 @@
+/** TODO IE still not picking up hover states as link declarations may need to be more verbose **/
+
+.$URN$_tabset-inactive-tab-row,
+.$URN$_tabset-active-tab-row  {
+    width: expression(this.parentElement.clientWidth);
+}
+.$URN$_tabset-body {
+    width: expression(this.parentElement.clientWidth);
+    height: expression(this.parentElement.clientHeight - 27);
+}
+.$URN$_tabset-background,
+.$URN$_tabset-body-background,
+.$URN$_tabset-background-inset{
+    width: expression(this.parentElement.clientWidth - 6);
+    height: expression(this.parentElement.clientHeight - 6);
+}
+.$URN$_tabset-body-top-left,
+.$URN$_tabset-body-top-right,
+.$URN$_tabset-body-bottom-left,
+.$URN$_tabset-body-bottom-right,
+.$URN$_tabset-body-top-left-inset,
+.$URN$_tabset-body-top-right-inset,
+.$URN$_tabset-body-bottom-left-inset,
+.$URN$_tabset-body-bottom-right-inset{
+    overflow: hidden;
+}
+.$URN$_tabset-body-top-horizontal,
+.$URN$_tabset-body-bottom-horizontal{
+    width: expression(this.parentElement.clientWidth - 10);   
+    overflow: hidden; 
+}
+.$URN$_tabset-body-left,
+.$URN$_tabset-body-right{
+    height:  expression(this.parentElement.clientHeight - 6);
+}
+.$URN$_tabset-body-content,
+.$URN$_tab-content,
+.$URN$_tabset-tab-content-active,
+.$URN$_tabset-tab-content-inactive,
+.$URN$_tabset-tab-content-disabled,
+.$URN$_tabset-tab-content-hidden {
+    height: expression(this.parentElement.clientHeight);
+    width: expression(this.parentElement.clientWidth);
+}
+
+/**  Inset  **/
+.$URN$_tabset-body-top-horizontal-inset,
+.$URN$_tabset-body-bottom-horizontal-inset{
+    width: expression(this.parentElement.clientWidth - 6);
+}
+.$URN$_tabset-body-left-inset,
+.$URN$_tabset-body-right-inset{
+    height: expression(this.parentElement.clientHeight - 6);
+}
+
+
+
+
+

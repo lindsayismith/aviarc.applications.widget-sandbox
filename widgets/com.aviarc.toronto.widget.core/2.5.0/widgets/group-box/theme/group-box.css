@@ -1,0 +1,619 @@
+.$URN$_group-box-background {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.$URN$_group-box-content {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.$URN$_group-box-background {
+    margin: 3px;
+    background-color: #fff;
+}
+.$URN$_group-box-legend-container {
+    margin: 0 3px;
+    position: absolute;
+    top: -12px;
+    height: 28px;
+    font-weight: bold;
+    display: block;
+	overflow:hidden;
+	white-space:nowrap;
+}
+.$URN$_group-box-legend-label {
+    float: left;
+    background: url(group_box_legend_hrep.png) 0 0 repeat-x;
+    height: 100%;
+    padding: 6px 0 0 0;
+    font-weight: normal;
+    white-space: nowrap;
+	overflow:hidden;
+}
+.$URN$_group-box-legend-left,
+.$URN$_group-box-legend-right {
+    position: relative;
+    width: 20px;
+    height: 100%;
+    display: block;
+    float: left;
+}
+.$URN$_group-box-legend-left {
+    background: url(group_box_legend.png) 0 0 no-repeat;
+}
+.$URN$_group-box-legend-right {
+    background: url(group_box_legend.png) 100% 0 no-repeat;
+}
+/* Group-box borders */
+.$URN$_group-box-top-left,
+.$URN$_group-box-top-right,
+.$URN$_group-box-top-horizontal,
+.$URN$_group-box-top,
+.$URN$_group-box-bottom,
+.$URN$_group-box-bottom-left,
+.$URN$_group-box-bottom-right,
+.$URN$_group-box-bottom-horizontal {
+    position: absolute;
+    height: 6px;
+    line-height: 1px;
+    font-size: 1px;
+}
+.$URN$_group-box-top{
+    left: -3px;
+    top: -3px;
+    right: -3px;
+}
+.$URN$_group-box-bottom{
+    left: -3px;
+    bottom: -3px;
+    right: -3px;
+}
+.$URN$_group-box-top-left,
+.$URN$_group-box-top-right,
+.$URN$_group-box-bottom-left,
+.$URN$_group-box-bottom-right{
+    width: 6px;
+    top: 0;
+}
+.$URN$_group-box-top-left {
+    left: 0;
+    background: url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.5.0:window/window.png) -11px -35px no-repeat;
+}
+.$URN$_group-box-top-right{
+    right: 0;
+    background: url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.5.0:window/window.png) -151px -35px no-repeat;
+}
+.$URN$_group-box-bottom-left{
+    width: 6px;
+    top: 0;
+    left: 0;
+    background: url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.5.0:window/window.png) -11px -45px no-repeat;
+}
+.$URN$_group-box-bottom-right{
+    width: 6px;
+    top: 0;
+    right: 0;
+    background: url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.5.0:window/window.png) -151px -45px no-repeat;
+}
+.$URN$_group-box-top-horizontal,
+.$URN$_group-box-bottom-horizontal{
+    top: 0;
+    left: 6px;
+    right: 6px;
+}
+.$URN$_group-box-top-horizontal{
+    background: url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.5.0:window/window_hrep.png) 0 -35px repeat-x;
+}
+.$URN$_group-box-bottom-horizontal{
+    background: url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.5.0:window/window_hrep.png) 0 -45px repeat-x;
+}
+.$URN$_group-box-left,
+.$URN$_group-box-right{
+    position: absolute;
+    top: 3px;
+    bottom: 3px;
+    width: 6px;
+}
+.$URN$_group-box-left{
+    left: -3px;
+    background: url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.5.0:window/window_vrep.png) -11px 0 repeat-y;
+}
+.$URN$_group-box-right{
+    right: -3px;
+    background: url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.5.0:window/window_vrep.png) -21px 0 repeat-y;
+}
+
+
+/*** ---------------- Custom Classes Begin ---------------------------------------------------------------- ***/
+
+/* "raised" - swap background imagery used for the group-box*/
+.$URN$_group-box-legend-label-raised {background-image: url(group_box_legend_raised_hrep.png);}
+.$URN$_group-box-legend-left-raised {background-image: url(group_box_legend_raised.png);}
+.$URN$_group-box-legend-right-raised {background-image: url(group_box_legend_raised.png);}
+.$URN$_group-box-top-left-raised {background-position: -11px -53px;}
+.$URN$_group-box-top-horizontal-raised {background-position:0 -53px;}
+.$URN$_group-box-top-right-raised {background-position:-151px -53px;}
+.$URN$_group-box-bottom-left-raised {background-position:-11px -63px;}
+.$URN$_group-box-bottom-horizontal-raised {background-position:0 -63px;}
+.$URN$_group-box-bottom-right-raised {background-position:-151px -63px;}
+.$URN$_group-box-left-raised {background-position:-33px 0;}
+.$URN$_group-box-right-raised{background-position:-43px 0;}
+.$URN$_group-box-background-raised{background-color: #d9d9d9;}
+
+/* "simple" - remove use of graphics on the group-box borders */
+.$URN$_group-box-legend-label-simple,
+.$URN$_group-box-legend-left-simple,
+.$URN$_group-box-legend-right-simple,
+.$URN$_group-box-top-left-simple,
+.$URN$_group-box-top-horizontal-simple,
+.$URN$_group-box-top-right-simple,
+.$URN$_group-box-bottom-left-simple,
+.$URN$_group-box-bottom-horizontal-simple,
+.$URN$_group-box-bottom-right-simple,
+.$URN$_group-box-left-simple,
+.$URN$_group-box-right-simple{background-image:none;}
+.$URN$_group-box-background-simple{
+	border:1px inset #666;
+}
+.$URN$_group-box-background-simple,
+.$URN$_group-box-content-simple {margin:0;}
+.$URN$_group-box-legend-label-simple {padding:2px 5px;background:#fcfcfc;border:1px inset #ddd;height:auto;border-left:1px solid #f4f4f4;}
+.$URN$_group-box-legend-left-simple {background-color:#7a7a7a;height:13px;width:1px;overflow:hidden;left:0;position:absolute;top:0;}
+.$URN$_group-box-legend-right-simple {width:1px;overflow:hidden;}
+
+/* "simple_raised" - change colors for using with the "simple" class */
+.$URN$_group-box-background-simple_raised {
+    background:#d9d9d9;
+	border:1px outset #000;
+}
+.$URN$_group-box-legend-label-simple_raised {background:#ddd;border:1px solid #d1d1d1;border-top-color:#b2b2b2;}
+.$URN$_group-box-legend-left-simple_raised {background-color:#b2b2b2;}
+.$URN$_group-box-legend-right-simple_raised {background-color:#393939;height:12px;width:1px;overflow:hidden;margin-left:-1px;top:0;}
+
+/* "title_smaller" */
+.$URN$_group-box-legend-label-title_smaller {font-size: 85%;}
+
+/* "title_small" */
+.$URN$_group-box-legend-label-title_small {font-size: 95%;}
+
+/* "title_medium" */
+.$URN$_group-box-legend-label-title_medium {font-size: 105%;}
+
+/* "title_large" */
+.$URN$_group-box-legend-label-title_large {font-size: 120%;padding-top:5px;}
+
+/* "title_larger" */
+.$URN$_group-box-legend-label-title_larger {font-size: 150%;padding-top:2px}
+
+/* "title_huge" */
+.$URN$_group-box-legend-label-title_huge {font-size: 200%;padding-top:0;}
+
+/* --------------- Title Style and position Custom Classes --------------- */
+
+/* "title_bottom" */
+.$URN$_group-box-legend-container-title_bottom {
+    top:auto;
+	bottom:-14px;
+}
+.$URN$_group-box-legend-label-title_bottom {
+    background-position:0 -31px;
+}
+.$URN$_group-box-legend-left-title_bottom {
+    background-position:0 -31px;
+}
+.$URN$_group-box-legend-right-title_bottom {
+    background-position:100% -31px;
+}
+
+/* "title_italic" */
+.$URN$_group-box-legend-label-title_italic {font-style:italic;}
+
+/* "title_bold" */
+.$URN$_group-box-legend-label-title_bold {font-weight:bold;}
+
+/* "title_right" - shifts the group-box title to the right. By default the title is set to the left. */
+span.$URN$_group-box-legend-container-title_right {
+	right:0;
+	text-align:right;
+}
+span.$URN$_group-box-legend-label-title_right {
+	left:auto;
+	right:25px;
+	text-align:right;
+}
+
+/* "title_center" - shifts the group-box title to the horizontal middle.
+		Note: if the title is too long for the space given by the group-box it will be cut off and will not wrap.*/
+.$URN$_group-box-legend-container-title_center {text-align:center;left:0;right:0;}
+.$URN$_group-box-legend-left-title_center,
+.$URN$_group-box-legend-right-title_center,
+.$URN$_group-box-legend-label-title_center {display:inline-block;position:absolute;float:none;top:-6px;}
+.$URN$_group-box-legend-label-title_center {top:0;}
+
+
+/*Use the background for a framed graphic as this example shows.
+	Note: the example image is 600px wide and 300px high, so your group-box would need to be a corressponding size before you will begin to see the background finish. */
+div.$URN$_group-box-background-bg_image {
+	background-image:url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.5.0:image/aviarc_logo.jpg);
+	background-position:0 0;
+	background-repeat:no-repeat;
+	-moz-opacity:1;
+    opacity:1;
+    filter:alpha(opacity=100);
+}
+
+/* "bg_gradient" */
+div.$URN$_group-box-background-bg_gradient{
+	background:#f0f2f3 url(gradient/group_box_bg_hrep.png) 0 100%  repeat-x;
+}
+
+/* "bg_solid" */
+div.$URN$_group-box-background-bg_solid {
+	-moz-opacity:1;
+    opacity:1;
+    filter:alpha(opacity=100);
+}
+
+/* "bg_transparent" */
+div.$URN$_group-box-background-bg_transparent{
+	-moz-opacity:0.2;
+    opacity:.20;
+    filter:alpha(opacity=20);
+}
+
+/* "bg_no_color" */
+div.$URN$_group-box-background-bg_no_color{
+	background-color:transparent;
+}
+
+/* "bg_none" */
+div.$URN$_group-box-background-bg_none{
+	background:none;
+}
+
+/* "bg_top_left" - position the background image at the top left of the group-box.
+	Note: By default "bg_image" will position the background image at the top left, so this class may only be neccessary for using altering the position of the background-image when using the "watermark" complex custom class. */
+div.$URN$_group-box-background-bg_top_left {
+	background-position:0 0;
+}
+
+/* "bg_top_right" - position the background image at the top right of the group-box.  */
+div.$URN$_group-box-background-bg_top_right {
+	background-position:100% 0;
+}
+
+/* "bg_bottom_left" - position the background image at the bottom left of the group-box.  */
+div.$URN$_group-box-background-bg_bottom_left {
+	background-position:0 100%;
+}
+
+/* "bg_bottom_right" - position the background image at the bottom right of the group-box. */
+div.$URN$_group-box-background-bg_bottom_right {
+	background-position:100% 100%;
+}
+
+/* "bg_center" - position the background image in the vertical and horizontal middle of the group-box. */
+div.$URN$_group-box-background-bg_center {
+	background-position:50% 50%;
+}
+
+/* "bg_center_top" - position the background image in the horizontal middle at the top of the group-box. */
+div.$URN$_group-box-background-bg_center_top {
+	background-position:50% 0;
+}
+
+/* "bg_center_bottom" - position the background image in the horizontal middle at the bottom of the group-box. */
+div.$URN$_group-box-background-bg_center_bottom {
+	background-position:50% 100%;
+}
+
+/* "bg_center_left" - position the background image in the vertical middle at the left of the group-box. */
+div.$URN$_group-box-background-bg_center_left {
+	background-position:0 50%;
+}
+
+/* "bg_center_right" - position the background image in the vertical middle at the right of the group-box.*/
+div.$URN$_group-box-background-bg_center_right {
+	background-position:100% 50%;
+}
+
+/* "bg_wallpaper" - make the background image repeat horizontally and vertically to create a wallpaper pattern.
+	Tip: The initial position of the repeating image can still be positioned using other classes, i.e: "bg_center" */
+div.$URN$_group-box-background-bg_wallpaper {
+	background-repeat:repeat;
+}
+
+/* "bg_vertical" - make the background image repeat vertically only.
+	Tip: The initial position of the repeating image can still be positioned using other classes, i.e: "bg_center" */ 
+div.$URN$_group-box-background-bg_vertical {
+	background-repeat:repeat-y;
+}
+
+/* "bg_horizontal" - make the background image repeat horizontally only.
+	Tip: The initial position of the repeating image can still be positioned using other classes, i.e: "bg_center" */
+div.$URN$_group-box-background-bg_horizontal {
+	background-repeat:repeat-x;
+}
+
+/* "icon" - represent the title as an icon. For use with a title. Cannot use "title_center" with this class - though "title_right" is ok. */
+.$URN$_group-box-legend-container-icon {
+	background: url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.5.0:group-box/group_box_legend_hrep.png) 0 0 repeat-x;
+	margin:0 23px;
+	overflow:visible;
+}
+.$URN$_group-box-legend-left-icon {margin-left:-20px;}
+.$URN$_group-box-legend-right-icon {margin-right:-20px;}
+/* "icon" (continued), "icon_left" and "icon_right" - presents an icon to the left side of the group-box top bar. For use with a title and using the "panel" class. */
+span.$URN$_group-box-legend-label-icon,
+span.$URN$_group-box-legend-left-icon_left,
+span.$URN$_group-box-legend-right-icon_right {
+	height:16px;
+	width:16px;
+	margin:5px 5px 0 5px;
+	padding:0;
+	text-indent:9999px;
+	background-image:url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.5.0:button/label_icons.png);
+	background-position:0 0;
+	background-repeat:no-repeat;
+	border:none;
+}
+
+/* "icon_export" - changes the icon used with above "icon_left" and "icon_right" classes.
+	Note: For use with a title and using the "panel" class.
+	Tip: Only create new css for icon positions your application will use to save bytes.*/
+.$URN$_group-box-legend-label-icon_export,
+.$URN$_group-box-legend-left-icon_left_export,
+.$URN$_group-box-legend-right-icon_right_export {
+	background-position:0 -176px;
+}
+
+/* "panel" - Simple panel-styled group-box with drop-shadow
+		Moves border elements to outside of content area to create a clean, square shape for the content to fill.
+		This custom class is a good example of creating a gropup-box with different sized borders.
+		If you need to create specially different sized borders you can follow the pattern of this class and change the values.
+		Tip: Using this class on a group-box whilst not using a title is good for framing an image as background - use together with "bg_image".
+		Note: Cannot be used with "raised" as the size and positioning of the borders are different from the default inset (default) and raised borders. 
+		Note: This class moves the group-box title to completely inside the main container element, so internal widgets may need to move down.*/
+.$URN$_group-box-top-panel {
+    top:-6px;
+	left:-6px;
+	right:-6px;
+	height:14px;
+}
+.$URN$_group-box-bottom-panel {
+    bottom:-6px;
+	left:-6px;
+	right:-6px;
+	height:14px;
+}
+.$URN$_group-box-top-left-panel, .$URN$_group-box-top-right-panel,
+.$URN$_group-box-bottom-left-panel, .$URN$_group-box-bottom-right-panel {
+    width:14px;
+	height:14px;
+}
+.$URN$_group-box-top-left-panel {background: url(panel/group_box.png) 0 0 no-repeat;}
+.$URN$_group-box-top-right-panel {background: url(panel/group_box.png) 100% 0 no-repeat;}
+.$URN$_group-box-bottom-left-panel {background: url(panel/group_box.png) 0 100% no-repeat;}
+.$URN$_group-box-bottom-right-panel {background: url(panel/group_box.png) 100% 100% no-repeat;}
+.$URN$_group-box-top-horizontal-panel, .$URN$_group-box-bottom-horizontal-panel {
+    height:13px;
+	left:14px;
+	right:14px;
+}
+.$URN$_group-box-top-horizontal-panel {background: url(panel/group_box_hrep.png) 0 0 repeat-x;}
+.$URN$_group-box-bottom-horizontal-panel {background: url(panel/group_box_hrep.png) 0 100% repeat-x;}
+.$URN$_group-box-left-panel, .$URN$_group-box-right-panel {
+    width:14px;
+	top:8px;
+	bottom:8px;
+}
+.$URN$_group-box-left-panel {
+	background: url(panel/group_box_vrep.png) 0 0 repeat-y;
+	left:-6px;
+}
+.$URN$_group-box-right-panel {
+	background: url(panel/group_box_vrep.png) 100% 0 repeat-y;
+	right:-5px;
+}
+.$URN$_group-box-background-panel {
+	background:#fff;
+	-moz-opacity: 0.2;
+    opacity: .20;
+    filter: alpha(opacity=20);
+}
+.$URN$_group-box-legend-container-panel{
+	top:3px;
+	left:0;
+	right:0;
+	height:30px;
+	border-left:1px solid #fff;
+	background:#fff url(panel/group_box_legend_hrep.png) 0 0 repeat-x;
+	margin:0 3px;
+}
+.$URN$_group-box-legend-label-panel{
+	position:absolute;
+	top:0;
+	left:25px;
+	right:26px;
+	height:28px;
+	padding:0;
+	line-height:28px;
+	background-image:none;
+	font-weight:bold;
+}
+.$URN$_group-box-legend-left-panel,
+.$URN$_group-box-legend-right-panel{
+	float:right;
+	border-right:1px solid #a9a9a9;
+	height:28px;
+	background-image:none;
+	margin:0;
+}
+.$URN$_group-box-legend-left-panel{
+	float:left;
+	border:none;
+	background-image:none;
+}
+
+/* "panel_title_bottom" */
+.$URN$_group-box-legend-container-panel_title_bottom {
+    top:auto;
+	bottom:3px;
+}
+
+/* "panel_title_caption" - good for using the title as an overlaid caption if using bg_image. */
+.$URN$_group-box-legend-container-panel_title_caption {
+    background:#333;
+	-moz-opacity: 0.6;
+    opacity: .60;
+    filter: alpha(opacity=60);
+	bottom:3px;
+	top:auto;
+	height:36px;
+	border:none;
+	border-top:3px solid #000;
+}
+.$URN$_group-box-legend-label-panel_title_caption {
+	font-weight:normal;
+	color:#fff;
+	line-height:1.2em;
+	top:1px;
+	white-space:normal;
+}
+.$URN$_group-box-legend-right-panel_title_caption {
+	border:none;
+}
+
+/* "rounded" - 6px rounded corner group-box with drop-shadow. */
+.$URN$_group-box-top-rounded {
+    top:-6px;
+	left:-6px;
+	right:-6px;
+	height:20px;
+}
+.$URN$_group-box-bottom-rounded {
+    bottom:-6px;
+	left:-6px;
+	right:-6px;
+	height:20px;
+}
+.$URN$_group-box-top-left-rounded, .$URN$_group-box-top-right-rounded,
+.$URN$_group-box-bottom-left-rounded, .$URN$_group-box-bottom-right-rounded {
+    width:20px;
+	height:20px;
+}
+.$URN$_group-box-top-left-rounded {background: url(rounded/group_box.png) -4px -4px no-repeat;}
+.$URN$_group-box-top-right-rounded {background: url(rounded/group_box.png) -96px -4px no-repeat;}
+.$URN$_group-box-bottom-left-rounded {background: url(rounded/group_box.png) -4px -96px no-repeat;}
+.$URN$_group-box-bottom-right-rounded {background: url(rounded/group_box.png) -96px -96px no-repeat;}
+.$URN$_group-box-top-horizontal-rounded,
+.$URN$_group-box-bottom-horizontal-rounded {
+    height:20px;
+	left:20px;
+	right:20px;
+}
+.$URN$_group-box-top-horizontal-rounded {background: url(rounded/group_box_hrep.png) 0 -4px repeat-x;}
+.$URN$_group-box-bottom-horizontal-rounded {background: url(rounded/group_box_hrep.png) 0 -96px repeat-x;}
+.$URN$_group-box-left-rounded,
+.$URN$_group-box-right-rounded {
+    width:20px;
+	top:14px;
+	bottom:14px;
+}
+.$URN$_group-box-left-rounded {
+	background: url(rounded/group_box_vrep.png) -4px 0 repeat-y;
+	left:-6px;
+}
+.$URN$_group-box-right-rounded {
+	background: url(rounded/group_box_vrep.png) -96px 0 repeat-y;
+	right:-6px;
+}
+.$URN$_group-box-background-rounded {
+	background:#fff;
+}
+.$URN$_group-box-legend-container-rounded{
+	top:0;
+	left:0;
+	right:0;
+	height:30px;
+	margin:0;
+}
+.$URN$_group-box-legend-label-rounded{
+	position:absolute;
+	top:0;
+	left:14px;
+	right:14px;
+	height:30px;
+	padding:0;
+	line-height:28px;
+	color:#333;
+	background:#fff url(rounded/group_box_hrep.png) 0 -250px repeat-x;
+}
+.$URN$_group-box-legend-left-rounded,
+.$URN$_group-box-legend-right-rounded{
+	float:right;
+	height:30px;
+	background:url(rounded/group_box.png) -96px -250px no-repeat;
+	margin:0;
+	right:-6px;
+}
+.$URN$_group-box-legend-left-rounded{
+	float:left;
+	border:none;
+	left:-6px;
+	background:url(rounded/group_box.png) -4px -250px no-repeat;
+}
+
+/* "rounded_title_bottom" */
+.$URN$_group-box-legend-container-rounded_raised_title_bottom,
+.$URN$_group-box-legend-container-rounded_title_bottom {
+    top:auto;
+	bottom:0;
+}
+.$URN$_group-box-legend-label-rounded_title_bottom {background-position:0 -320px;}
+.$URN$_group-box-legend-left-rounded_title_bottom {background-position:-4px -320px;}
+.$URN$_group-box-legend-right-rounded_title_bottom {background-position:-96px -320px;}
+
+/* "rounded_title_right" */
+.$URN$_group-box-legend-label-rounded_title_right {
+	text-align:right;
+}
+
+
+/* "rounded_raised" - swap background imagery used for the group-box while using the "rounded" class*/
+.$URN$_group-box-legend-label-rounded_raised {background-position:0 -370px;}
+.$URN$_group-box-legend-left-rounded_raised {background-position:-4px -370px;}
+.$URN$_group-box-legend-right-rounded_raised {background-position:-96px -370px;}
+.$URN$_group-box-top-left-rounded_raised {background-position: -4px -124px;}
+.$URN$_group-box-top-horizontal-rounded_raised {background-position:0 -124px;}
+.$URN$_group-box-top-right-rounded_raised {background-position:-96px -124px;}
+.$URN$_group-box-bottom-left-rounded_raised {background-position:-4px -216px;}
+.$URN$_group-box-bottom-horizontal-rounded_raised {background-position:0 -216px;}
+.$URN$_group-box-bottom-right-rounded_raised {background-position:-96px -216px;}
+.$URN$_group-box-left-rounded_raised {background-position:-124px 0;}
+.$URN$_group-box-right-rounded_raised{background-position:-216px 0;}
+.$URN$_group-box-background-rounded_raised{background-color: #d9d9d9;}
+
+/* "rounded_raised_title_bottom" */
+.$URN$_group-box-legend-label-rounded_raised_title_bottom {background-position:0 -440px;}
+.$URN$_group-box-legend-left-rounded_raised_title_bottom {background-position:-4px -440px;}
+.$URN$_group-box-legend-right-rounded_raised_title_bottom {background-position:-96px -440px;}
+
+/* "watermark" - places an image in the bottom right of the group-box.
+	Note: cannot be used together with "bg_image" */
+.$URN$_group-box-background-watermark{
+	background-image:url(watermark.png);
+	background-position:100% 100%;
+	background-repeat:no-repeat;
+}
+.$URN$_group-box-background-watermark{
+    *background-image:url(watermark.gif);
+}
+
+
+/*** ---------------- Custom Classes End ---------------------------------------------------------------- ***/

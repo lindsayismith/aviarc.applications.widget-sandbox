@@ -1,0 +1,47 @@
+<widget name="screen-properties"
+    factory-class="com.aviarc.framework.toronto.widget.DefaultWidgetProviderFactoryImpl" 
+    rendered-node-factory="com.aviarc.toronto.widget.core.ScreenPropertiesRenderedNodeFactory">
+    
+    <sub-elements>
+        <sub-element name="require-dataset">
+            <attributes>
+                <attribute name="name" type="dataset" mandatory="y"/>
+            </attributes>
+        </sub-element>
+        <sub-element name="include">
+            <attributes>
+                <attribute name="url" type="string" mandatory="y"/>
+            </attributes>
+        </sub-element>
+        <sub-element name="css-include">
+            <attributes>
+                <attribute name="url" type="string" mandatory="y"/>
+            </attributes>
+        </sub-element>
+        <sub-element name="allow-action">
+            <attributes>
+                <attribute name="name" type="action" mandatory="y"/>
+            </attributes>
+        </sub-element>
+        <!-- Settings to control rendering on mobile devices -->
+        <sub-element name="mobile-viewport" singleton="y">
+            <attributes>
+                <attribute name="width" type="string" mandatory="n"/>
+                <attribute name="height" type="string" mandatory="n"/>
+                <attribute name="user-scalable" type="bool" mandatory="n" default="y"/>
+                <attribute name="initial-scale" type="number" mandatory="n" />
+                <attribute name="maximum-scale" type="number" mandatory="n" />
+                <attribute name="minimum-scale" type="number" mandatory="n" />
+            </attributes>
+        </sub-element>
+    </sub-elements>
+    
+    <children allowed="n" />
+    
+    <includes>
+        <js-include file="ScreenProperties.js"/>
+    </includes>
+    
+    <js-constructor>new YAHOO.com.aviarc.framework.toronto.widget.core.v2_5_0.ScreenProperties()</js-constructor>
+    
+</widget>

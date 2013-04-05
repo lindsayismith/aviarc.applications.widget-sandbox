@@ -1,0 +1,22 @@
+<widget name="file-upload"
+    factory-class="com.aviarc.framework.toronto.widget.DefaultWidgetProviderFactoryImpl"     
+    rendered-node-factory="com.aviarc.toronto.widget.core.FileUploadNodeFactory"
+    container-positioning="y">
+  <attributes>
+    <attribute name="visible" mandatory="n" default="y" type="bool" />
+    <attribute name="name" mandatory="n" type="name" />
+    <attribute name="display-name" mandatory="n"/>
+    <attribute name="class" mandatory="n" type="cssclass" />
+    <attribute name="tooltip" mandatory="n" />
+    <attribute name="temp-field" mandatory="y" />
+    <attribute name="original-field" mandatory="y" />
+    <attribute name="size" mandatory="y" default="20" />
+    <attribute name="mandatory" mandatory="n" default="n" type="bool" />
+    <attribute name="enabled" mandatory="n" default="y" type="bool" />
+</attributes>
+  <includes>
+    <js-include file="FileUpload.js"/>
+    <css-include file="file-upload.css"/>
+  </includes>
+  <js-constructor>new YAHOO.com.aviarc.framework.toronto.widget.core.v2_5_0.FileUpload()</js-constructor>
+</widget>

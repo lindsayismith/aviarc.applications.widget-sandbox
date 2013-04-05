@@ -1,0 +1,12 @@
+/** FILE-UPLOAD **/
+input.$URN$_file-upload {
+	font-family:arial,helvetica; font-size:12px; color:black; padding:0px;
+}
+
+div.$URN$_file-upload-decorator {
+	border: none;
+}
+
+div.$URN$_file-upload-decorator-selected {
+	border: 2px solid red;
+}

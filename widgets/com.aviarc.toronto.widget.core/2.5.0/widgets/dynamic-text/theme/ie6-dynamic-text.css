@@ -1,0 +1,98 @@
+/* This file is long to eliminate any stupidity with ie6.  All sensible combinations are covered ... hopefully */
+
+.$URN$_dynamic-text {
+    font-family: arial,helvetica;
+    font-size: 12px;
+    color: black;
+    padding: 0px;
+}
+
+.$URN$_dynamic-text-bold {
+    font-family: arial,helvetica;
+    font-size: 12px;
+    color: black;
+    padding: 0px;
+    font-weight: bold;
+}
+
+.$URN$_dynamic-text-bold-center {
+    font-family: arial,helvetica;
+    font-size: 12px;
+    color: black;
+    padding: 0px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.$URN$_dynamic-text-bold-center-disabled {
+    font-family: arial,helvetica;
+    font-size: 12px;
+    padding: 0px;
+    color: rgb(150,150,150);
+    font-weight: bold;
+    text-align: center;
+}
+
+.$URN$_dynamic-text-bold-disabled {
+    font-family: arial,helvetica;
+    font-size: 12px;
+    padding: 0px;
+    color: rgb(150,150,150);
+    font-weight: bold;
+}
+
+.$URN$_dynamic-text-bold-disabled-right {
+    font-family: arial,helvetica;
+    font-size: 12px;
+    padding: 0px;
+    color: rgb(150,150,150);
+    font-weight: bold;
+    text-align: right;
+}
+
+.$URN$_dynamic-text-bold-right {
+    font-family: arial,helvetica;
+    font-size: 12px;
+    color: black;
+    padding: 0px;
+    font-weight: bold;
+    text-align: right;
+}
+
+.$URN$_dynamic-text-center {
+    font-family: arial,helvetica;
+    font-size: 12px;
+    color: black;
+    padding: 0px;
+    text-align: center;
+}
+
+.$URN$_dynamic-text-center-disabled {
+    font-family: arial,helvetica;
+    font-size: 12px;
+    padding: 0px;
+    color: rgb(150,150,150);
+    text-align: center;
+}
+
+.$URN$_dynamic-text-disabled {
+    font-family: arial,helvetica;
+    font-size: 12px;
+    padding: 0px;
+    color: rgb(150,150,150);
+}
+
+.$URN$_dynamic-text-disabled-right {
+    font-family: arial,helvetica;
+    font-size: 12px;
+    padding: 0px;
+    color: rgb(150,150,150);
+}
+
+.$URN$_dynamic-text-right {
+    font-family: arial,helvetica;
+    font-size: 12px;
+    color: black;
+    padding: 0px;
+    text-align: right;
+}

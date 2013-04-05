@@ -1,0 +1,41 @@
+<widget name="window" factory-class="com.aviarc.framework.toronto.widget.DefaultWidgetProviderFactoryImpl">
+    <attributes>
+
+        <attribute name="name" type="name" mandatory="n"/>
+        <attribute name="left" mandatory="y"/>
+        <attribute name="top" mandatory="y"/>
+        <attribute name="width" mandatory="y"/>
+        <attribute name="height" mandatory="y"/>
+        <attribute name="visible" mandatory="n" default="y"/>
+
+        <attribute name="title" mandatory="n"/>
+        <attribute name="footer-text" mandatory="n"/>
+        
+        <attribute name="min-width" mandatory="n" default="120"/>
+        <attribute name="min-height" mandatory="n" default="60"/>
+        <attribute name="max-width" mandatory="n"/>
+        <attribute name="max-height" mandatory="n"/>
+
+        <attribute name="minimized-width" mandatory="n"/>
+        <attribute name="minimized-height" mandatory="n"/>
+
+        <attribute name="resizable" mandatory="n" default="y" datatype="bool"/>
+        <attribute name="minimizable" mandatory="n" default="y" datatype="bool"/>
+        <attribute name="closable" mandatory="n" default="y" datatype="bool"/>
+        <attribute name="movable" mandatory="n" default="y" datatype="bool"/>
+        
+        <attribute name="drag-mode" mandatory="n" default="auto"/>
+
+        <attribute name="close-button-tooltip" mandatory="n"/>
+        <attribute name="minimize-button-tooltip" mandatory="n"/>
+        <attribute name="maximize-button-tooltip" mandatory="n"/>
+
+    </attributes>
+    <children allowed="y"/>
+    <includes>
+      <js-include file="Window.js"/>
+      <css-include file="window.css"/>
+      <msie6-css-include file="ie6-window.css"/>
+    </includes>
+    <js-constructor>new YAHOO.com.aviarc.framework.toronto.widget.core.v2_5_0.Window()</js-constructor>
+</widget>

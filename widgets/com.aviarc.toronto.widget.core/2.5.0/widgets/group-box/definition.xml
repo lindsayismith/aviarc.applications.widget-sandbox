@@ -1,0 +1,18 @@
+<widget name="group-box" 
+    factory-class="com.aviarc.framework.toronto.widget.DefaultWidgetProviderFactoryImpl" 
+    container-positioning="y"
+    advanced-positioning="y"
+    >
+    <attributes>
+		<attribute name="class" mandatory="n"/>
+        <attribute name="title" mandatory="n"/>
+        <attribute name="factory-class" mandatory="n"/>
+    </attributes>
+  <includes>
+    <js-include file="GroupBox.js"/>
+    <css-include file="group-box.css"/>
+    <msie6-css-include file="ie6-group-box.css"/>
+  </includes>
+  <children allowed="y"/>
+  <js-constructor>new YAHOO.com.aviarc.framework.toronto.widget.core.v2_5_0.GroupBox()</js-constructor>
+</widget>

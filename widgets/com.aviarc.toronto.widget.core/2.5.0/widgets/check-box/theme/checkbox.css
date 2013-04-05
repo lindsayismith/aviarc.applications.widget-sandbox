@@ -1,0 +1,204 @@
+.$URN$_checkbox {
+    position: absolute;
+}
+
+.$URN$_checkbox .checkbox-outer {
+	top: 50%;
+	bottom: 50%;
+	left: 50%;
+	right: 50%;
+    position: absolute;
+}
+
+.$URN$_checkbox .checkbox-inner {
+	height: 16px;
+	top: -8px;
+	left: -8px;
+	width: 16px;
+    position: absolute;
+}
+
+.$URN$_checkbox-mandatory .checkbox-mandatory {
+    position:absolute;
+	right:-20px;
+	top:-8px;
+    height:16px;
+	width:16px;
+	position:absolute;
+	text-indent:-9999px;
+	margin:-1px 0;
+	background:url(checkbox_mandatory.png) 0 -4px no-repeat;
+	cursor:help;
+}
+
+/* IE7 and 6 Styles */
+.$URN$_checkbox .checkbox-inner {
+	*margin:-4px 0 0 -4px;
+}
+
+/*** ---------------- Custom Classes Begin ---------------------------------------------------------------- ***/
+/* Mandatory asterisk options
+   These classes change the poistion of the mandatory asterisk indicator graphic.
+   Note: By default, the mandatory asterisk is positioned at the right of the check-box. 
+   Note: These classes will be ineffectual if using one of the position options. */
+/* "mandatory_left" */
+.$URN$_checkbox-mandatory_left .checkbox-mandatory {
+	right:auto;
+	left:-24px;
+}
+
+/* "mandatory_top" */
+.$URN$_checkbox-mandatory_top .checkbox-mandatory {
+	right:auto;
+	left:-10px;
+	top:-24px;
+}
+
+/* "mandatory_bottom" */
+.$URN$_checkbox-mandatory_bottom .checkbox-mandatory {
+	right:auto;
+	left:-10px;
+	top:8px;
+}
+
+/* Check-box container position options
+   The following classes will change the alignment of the checkbox input element within the container.
+   Note: By default, the check-box is centered in the widget container.
+   Note: The mandatory asterisk is positioned automatically when using these classes.   */
+/* "top_left" */
+.$URN$_checkbox-top_left .checkbox-outer {
+	top:0;
+	left:0;
+	right:auto;
+	bottom:auto;
+}
+.$URN$_checkbox-top_left .checkbox-inner {
+	top:0;
+	left:0;
+}
+.$URN$_checkbox-top_left .checkbox-mandatory {
+	top:0;
+	right: -28px;
+}
+
+/* "top" */
+.$URN$_checkbox-top .checkbox-outer {
+	top:0;
+	bottom:auto;
+}
+.$URN$_checkbox-top .checkbox-inner {top:0;}
+.$URN$_checkbox-top .checkbox-mandatory {
+	top:0;
+	left:auto;
+	right:-20px;
+}
+
+/* "top_right" */
+.$URN$_checkbox-top_right .checkbox-outer {
+	top:0;
+	left:auto;
+	right:0;
+	bottom:auto;
+}
+.$URN$_checkbox-top_right .checkbox-inner {
+	top:0;
+	right:0;
+	left:auto;
+	text-align:right;
+}
+.$URN$_checkbox-top_right .checkbox-mandatory {
+	top:0;
+	right:12px;
+}
+
+.com-aviarc-toronto-widget-core_2-1-1_checkbox-invalid .checkbox-inner{
+	background:red;
+}
+
+/* IE7 styles for "top_right" */
+.$URN$_checkbox-top_right .checkbox-inner {
+	*right:1px;
+}
+
+/* "left" */
+.$URN$_checkbox-left .checkbox-outer {
+	left:0;
+	right:auto;
+}
+.$URN$_checkbox-left .checkbox-inner {left:0;}
+.$URN$_checkbox-left .checkbox-mandatory {right:-28px;}
+
+/* "right" */
+.$URN$_checkbox-right .checkbox-outer {
+	left:auto;
+	right:0;
+}
+.$URN$_checkbox-right .checkbox-inner {
+	left:auto;
+	right:0;
+	text-align:right;
+}
+.$URN$_checkbox-right .checkbox-mandatory {right:12px;}
+/* IE7 styles for "right" */
+.$URN$_checkbox-right .checkbox-inner {
+	*right:1px;
+}
+
+/* "bottom_left" */
+.$URN$_checkbox-bottom_left .checkbox-outer {
+	top:auto;
+	left:0;
+	right:auto;
+	bottom:0;
+}
+.$URN$_checkbox-bottom_left .checkbox-inner {
+	top:auto;
+	left:0;
+	right:auto;
+	bottom:-3px;
+}
+.$URN$_checkbox-bottom_left .checkbox-mandatory {
+	top:-13px;
+	right: -28px;
+}
+/* IE7 styles for "bottom_left" */
+.$URN$_checkbox-bottom_left .checkbox-inner {
+	*bottom:1px;
+}
+
+/* "bottom" */
+.$URN$_checkbox-bottom .checkbox-outer {
+	bottom:0;
+	top:auto;
+}
+.$URN$_checkbox-bottom .checkbox-inner {top:-13px;}
+.$URN$_checkbox-bottom .checkbox-mandatory {
+	top:-13px;
+	left:auto;
+	right:-20px;
+}
+
+/* "bottom_right" */
+.$URN$_checkbox-bottom_right .checkbox-outer {
+	top:auto;
+	left:auto;
+	right:0;
+	bottom:0;
+}
+.$URN$_checkbox-bottom_right .checkbox-inner {
+	top:auto;
+	right:0;
+	left:auto;
+	bottom:-3px;
+	text-align:right;
+}
+.$URN$_checkbox-bottom_right .checkbox-mandatory {
+	top:-13px;
+	right:12px;
+}
+/* IE7 styles for "bottom_right" */
+.$URN$_checkbox-bottom_right .checkbox-inner {
+	*right:1px;
+	*bottom:1px;
+}
+/*** ---------------- Custom Classes Ends ---------------------------------------------------------------- ***/

@@ -1,0 +1,14 @@
+.$URN$_text-edit .text-edit-outer,
+.$URN$_text-edit .text-edit-inner {
+    width: expression(this.parentElement.clientWidth);
+    height: expression(this.parentElement.clientHeight);
+}
+
+.$URN$_text-edit .text-edit-inner {
+    width: expression(this.parentElement.clientWidth - 2);
+    height: expression(this.parentElement.clientHeight - 2);
+}
+
+.$URN$_text-edit textarea {
+    height: expression(this.parentElement.clientHeight);
+}

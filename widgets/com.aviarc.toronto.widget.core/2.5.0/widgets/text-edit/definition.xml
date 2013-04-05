@@ -1,0 +1,27 @@
+<widget name="text-edit"
+        factory-class="com.aviarc.framework.toronto.widget.DefaultWidgetProviderFactoryImpl"
+        container-positioning="y"
+        element-validator-class="com.aviarc.framework.toronto.widget.validation.ContainerPositioningElementValidator">
+    <attributes>
+        <attribute name="datatype" mandatory="n"/>
+        <attribute name="allowedChars" mandatory="n"/>
+        <attribute name="disallowedChars" mandatory="n"/>
+        <attribute name="endOfMonth" mandatory="n"/>
+        <attribute name="focus" mandatory="n" default="n" type="bool"/>
+        <attribute name="show-type" mandatory="n" default="y" type="bool"/>
+        <attribute name="mandatory" mandatory="n" default="n" type="bool"/>
+        <attribute name="multi-line" mandatory="n" default="n" type="bool"/>
+        <attribute name="enabled" mandatory="n" default="y" type="bool"/>
+        <attribute name="field" mandatory="n" type="field"/>
+        <attribute name="length" mandatory="n"/>
+        <attribute name="real-time-validation" mandatory="n" default="n" type="bool" />
+        <attribute name="prompt-text" mandatory="n" default="" />
+    </attributes>
+    <includes>
+      <js-include file="simple-expr-parser.js"/>
+      <js-include file="TextEdit.js"/>
+      <css-include file="text-edit.css"/>
+      <msie6-css-include file="ie6-text-edit.css"/>
+    </includes>
+    <js-constructor>new YAHOO.com.aviarc.framework.toronto.widget.core.v2_5_0.TextEdit()</js-constructor>
+</widget>

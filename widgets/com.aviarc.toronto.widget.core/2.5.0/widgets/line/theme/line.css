@@ -1,0 +1,11 @@
+div.$URN$_line {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    background: black;
+}
+
+div.$URN$_line-red {
+    background: red;
+}
+

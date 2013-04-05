@@ -1,0 +1,17 @@
+<widget name="image"
+    factory-class="com.aviarc.framework.toronto.widget.DefaultWidgetProviderFactoryImpl"     
+    container-positioning="y">
+  <attributes>
+    <attribute name="url" mandatory="n" />
+    <attribute name="width" mandatory="y" />
+    <attribute name="height" mandatory="y" />
+    <attribute name="visible" mandatory="n" default="y" type="bool" />
+    <attribute name="enabled" mandatory="n" default="y" type="bool" />
+    <attribute name="action" mandatory="n" type="action" />
+  </attributes>
+  <includes>
+    <js-include file="Image.js"/>
+    <css-include file="image.css"/>
+  </includes>
+  <js-constructor>new YAHOO.com.aviarc.framework.toronto.widget.core.v2_5_0.Image()</js-constructor>  
+</widget>

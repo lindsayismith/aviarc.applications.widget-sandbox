@@ -1,0 +1,12 @@
+release.properties
+pom.xml.releaseBackup
+bin/
+target/
+.classpath
+.settings/
+.project
+*~
+.nfs*
+.*.swp
+.*.swo
+www

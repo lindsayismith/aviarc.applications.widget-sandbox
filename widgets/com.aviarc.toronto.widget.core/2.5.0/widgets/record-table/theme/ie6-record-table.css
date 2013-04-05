@@ -1,0 +1,60 @@
+.$URN$_record-table .record-table-container {
+    width:expression(this.parentElement.clientWidth - 6);
+    height:expression(this.parentElement.clientHeight - 6);
+    
+}
+.$URN$_record-table .record-table-container-inner {
+    width:expression(this.parentElement.clientWidth);
+    height:expression(this.parentElement.clientHeight);
+    overflow:hidden;
+}
+.$URN$_record-table .record-table-header {
+    width:expression(this.parentElement.clientWidth);
+}
+
+.$URN$_record-table .record-table-body {
+    /** This height is determined by the height of the header row **/
+    height:expression(this.parentElement.clientHeight - 23);
+    width:expression(this.parentElement.clientWidth);
+}
+.$URN$_record-table .record-table-scroller {
+    /*right:-1px;  if this is used it will bring up more scrollbars. IE6 only seems to repect right:0; properly on even numbers right:-1px; would be necessary on odd numbers - small price to pay for mostly ok*/
+    height: expression(this.parentElement.clientHeight - 23);
+}
+.$URN$_record-table .record-table td,
+.$URN$_record-table .record-table th {font-size:75%;}
+
+/* The background for header table is set here as we can't stop the background image from displaying too far into the borders area for some reason. */
+.$URN$_record-table .record-table-header tr,
+.$URN$_record-table .record-table-header tr.header th {
+    background:url(record_table_rows.png) 0 0 no-repeat;
+}
+
+.$URN$_record-table .record-table-scroller {
+    display:none;
+}
+
+/*  Borders  */
+.$URN$_record-table .record-table-border-top,
+.$URN$_record-table .record-table-border-bottom {
+    width:expression(this.parentElement.clientWidth + 6);
+    overflow:hidden;
+}
+.$URN$_record-table .record-table-border-top-horizontal,
+.$URN$_record-table .record-table-border-bottom-horizontal {
+    width:expression(this.parentElement.clientWidth - 12);
+    top:0;
+}
+.$URN$_record-table .record-table-border-bottom-left,
+.$URN$_record-table .record-table-border-bottom-right {
+    top:0;
+}
+.$URN$_record-table .record-table-border-left,
+.$URN$_record-table .record-table-border-right {
+    height:expression(this.parentElement.clientHeight - 6);
+}
+
+/* current+even has to look like current, not even */
+.$URN$_record-table tr.row-current-even {
+    background:#ebffd7 url(record_table_rows.png) -1900px 0 no-repeat;
+}

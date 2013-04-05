@@ -1,0 +1,9 @@
+.$URN$_screen-border {
+    width: expression(this.parentElement.offsetWidth);
+    height: expression(this.parentElement.offsetHeight);
+}
+
+.$URN$_screen-timer {
+    width: expression(this.parentElement.clientWidth);
+    height: expression(this.parentElement.clientHeight);
+}

@@ -1,0 +1,41 @@
+<widget name="record-table"
+        factory-class="com.aviarc.framework.toronto.widget.DefaultWidgetProviderFactoryImpl"
+        rendered-node-factory="com.aviarc.toronto.widget.core.RecordTableRenderedNodeFactory"
+        container-positioning="y">
+    
+    <attributes>
+        <attribute name="dataset" type="dataset" mandatory="y"/>
+        <attribute name="action" type="action" mandatory="n"/>
+        <attribute name="validate" mandatory="n" type="bool" default="n"/>
+        <attribute name="on-double-click" mandatory="n" type="action"/>
+
+        <attribute name="container-max-width" type="integer" mandatory="n"/>
+        <attribute name="container-min-width" type="integer" mandatory="n"/>
+        <attribute name="table-min-width" type="integer" mandatory="n"/>
+        <attribute name="enabled" mandatory="n" default="y" type="bool"/>
+    </attributes>
+    
+    <sub-elements>
+        <sub-element name="column" edit-name="record-table-column">
+            <attributes>
+                <attribute name="visible" mandatory="n" default="y" type="bool"/>
+                <attribute name="name" mandatory="n"/>
+                <attribute name="header" mandatory="n" locale-specific="y"/>
+                <attribute name="width" mandatory="n"/>
+                <attribute name="display-field" mandatory="y"/>
+                <attribute name="class" mandatory="n" type="classlist"/>
+                <attribute name="datatype" mandatory="n" default="none"/>
+                <attribute name="allow-sort" mandatory="n" default="y" type="bool"/>
+                <attribute name="align" mandatory="n" default="left"/>
+                <attribute name="header-align" mandatory="n" default="left"/>
+            </attributes>
+        </sub-element>
+    </sub-elements>
+    
+    <includes>
+        <js-include file="RecordTable.js"/>
+        <css-include file="record-table.css"/>
+        <msie6-css-include file="ie6-record-table.css"/>
+    </includes>
+
+</widget>

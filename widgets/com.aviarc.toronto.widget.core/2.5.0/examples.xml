@@ -1,0 +1,21 @@
+<examples>
+  <example title="A Button with an onclick handlers">
+      <description>In this example, a button is displayed with an inline event attached that shows an alert message</description>
+      <xml><![CDATA[
+          <button width="200" height="26" left="176" top="111" label="I'm a Button. Try clicking me" >
+              <action:when event="onclick" xmlns:action="urn:aviarc:widget:com.aviarc.toronto.widget.core.action:1">
+                  <action:alert message="I was clicked"/>
+              </action:when>
+         </button>]]>
+      </xml>
+  </example>
+  <example title="Raised and inset group-boxes">
+      <description>A group box is given the raised class and a title, and within it another group-box is positioned using the edge offsets</description>
+      <xml><![CDATA[
+          <group-box left="20" top="20" height="300" width="500" class="raised" title="Title goes here">
+              <group-box left="10" right="10" top="30" bottom="10" />
+            </group-box>
+      ]]>
+      </xml>
+  </example>
+</examples>

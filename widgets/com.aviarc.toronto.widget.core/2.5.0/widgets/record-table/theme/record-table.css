@@ -1,0 +1,329 @@
+.$URN$_record-table {
+    margin:0;
+    padding:0;
+    border:0;
+}
+.$URN$_record-table .record-table-container
+/** The tables live in here, so it needs to only be as big as its parent minus space for some border styling **/ {
+    position:absolute;
+    left:3px;
+    top:3px;
+    right:3px;
+    bottom:3px;
+    overflow:hidden;
+    background:url(record_table_rows.png) 0 0 no-repeat;
+    overflow-x:auto;
+}
+.$URN$_record-table .record-table-container-inner {
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+}
+.$URN$_record-table table {
+    padding:0;
+    border-spacing:0;
+    border-collapse:collapse;
+}
+.$URN$_record-table .record-table-header {
+    position:absolute;
+    top:0;
+    left:0;
+    /*right:16px;*/ /* This needs to be checked and set by the scrollbar width */
+    height:23px;
+}
+
+/**  This element is the new fake scroller - scrolling this element should move .$URN$_record-table-body like the tables native scrollbar  **/
+/** Need to check this in FF3/FF3.5 **/
+.$URN$_record-table .record-table-scroller {
+    position:absolute;
+    right:3px;
+    overflow-y:scroll;
+    overflow-x:hidden;
+    width:17px; /* This might need to be be checked as scrollbarWidth + 1 (for FF3.5 16px doesn't work)*/
+    bottom:3px;
+    /* A wee note about the height of this sucker
+         - the resulting height it is rendered depends on whether or not the horizontal scrollbar is present because of the min-width kicking in
+         If the scrollbar is not there it will render with the extra 16px height added.
+         this is not so important seeing as we will only see the fake scroller when the horizontal bar is there - and luckily the change in style makes the browser recheck how high it should be. (at least in FF - need to check some others)  */
+    margin-bottom:16px; /** IE<=7 doesn't notice the presence of the horizontal scroll bar when rendering this element
+        since we only need it to be present when there is a horizontal scrollbar seems fair to set it's position up from the bottom.**/
+    top:26px;
+}
+/**  This element sets the height of the content that the fake scroller is listening to **/
+.$URN$_record-table .record-table-scroller-height {
+    position:relative;
+    top:0;
+    right:0;
+    padding-bottom:320px; /**  This value needs to be maintained by reading clientHeight of .$URN$_record-table-body **/
+    display:block;
+    height:auto;
+    width:1px;
+}
+.$URN$_record-table .record-table-body {
+    position:absolute;
+    left:0;
+    /** This height is determined by the height of the header row **/
+    top:23px;
+    bottom:0;
+    right:0;
+    overflow-x:hidden;
+    overflow-y:scroll;
+    *overflow-x:hidden;
+    background:#fff;;
+}
+.$URN$_record-table .record-table-body table {
+    border-collapse:collapse;
+    border-spacing:0;
+    border-bottom:1px solid #ddd;
+}
+.$URN$_record-table table {
+    width:100%;
+    table-layout:fixed;
+}
+.$URN$_record-table tr {
+    background:#fff;
+    width:100%;
+}
+.$URN$_record-table tr.row-even {
+    background:#f3f3f3 url(record_table_rows.png) -3800px 0 no-repeat;
+}
+.$URN$_record-table tr.row-current {
+    background:#ebffd7 url(record_table_rows.png) -1900px 0 no-repeat;
+}
+
+.$URN$_record-table tr.row-invalid {
+    background:#ffacac ;
+}
+.$URN$_record-table tr.row-current-invalid{
+    background:#ffdcdc ;
+}
+.$URN$_record-table tr.row-even-invalid {
+	background:#feecdc ;
+}
+.$URN$_record-table tr.row-current-even-invalid{
+	background:#ffdcdc ;
+}
+
+.$URN$_record-table tr.header {
+    /* The background for the header rows moved to the whole table background - .com-aviarc-toronto-widget-core_2-1-1_record-table-header above
+         We could now use specific backgrounds on selected header cells if we wanted to if there were a class on the column . . .  I've put an example in below this class - */
+    background:none;
+    line-height:1.7em;
+    font-size:100%;
+    font-weight:bold;
+    color:#666;
+    position:relative;
+}
+.$URN$_record-table .record-table-header tr.header th.header-cell-blue {
+    background:url(blue/record_table_hrep.png) 0 0 no-repeat;
+}
+.$URN$_record-table tr.selected-row td.table-cell-blue {
+    background:url(blue/record_table_hrep.png) -1900px 0 no-repeat;
+}
+.$URN$_record-table tr.even td.table-cell-blue {
+    background:url(blue/record_table_hrep.png) -3800px 0 no-repeat;
+}
+.$URN$_record-table td,
+.$URN$_record-table th {
+    padding:1px 2px;
+    font-size:100%;
+    margin:0;
+    overflow:hidden;
+    unselectable:on;
+    -moz-user-select:none;
+    -khtml-user-select:none;
+    cursor:default;
+    border-right:1px solid #ddd;
+    width:auto;
+}
+.$URN$_record-table .record-table-body td {
+    line-height:1.3em;
+}
+.$URN$_record-table tr td {
+    position:relative;
+}
+.$URN$_record-table tr.header th {
+    text-align:left;
+    overflow:hidden !important;
+    white-space:nowrap;
+    width:auto;
+    height:23px;
+    position:relative;
+    font-weight:bold;
+    line-height:1.7em;
+}
+.$URN$_record-table tr.header th span {
+    display:none;
+    position:relative;
+    overflow:hidden !important;
+}
+.$URN$_record-table tr.header th span.header-cell-container {
+    display:block;
+    position:relative;
+    width:100%;
+    height:100%;
+}
+.$URN$_record-table tr.header th span.title {
+    display:block;
+}
+..$URN$_record-table .record-table-header tr th.text-center span.title,
+..$URN$_record-table .record-table-body tr td.text-center {
+    text-align:center;
+}
+.$URN$_record-table tr.header th.sort-column-ascending  span.primary-action-container,
+.$URN$_record-table tr.header th.sort-column-descending span.primary-action-container,
+.$URN$_record-table tr.header th.sort-column-ascending  span.primary-action-container span.ascending-sort,
+.$URN$_record-table tr.header th.sort-column-descending span.primary-action-container span.descending-sort,
+.$URN$_record-table tr.header th.secondary-action-visible span.secondary-action-container span.icon-map,
+.$URN$_record-table tr.header th.secondary-action-visible span.secondary-action-container {
+    display:block;
+}
+.$URN$_record-table tr.header th span.primary-action-container,
+.$URN$_record-table tr.header th span.secondary-action-container {
+    height:23px;
+    width:18px;
+    top:-20px;
+    margin:0;
+    position:relative;
+    float:right;
+}
+.$URN$_record-table tr.header th span.right span.primary-action-container,
+.$URN$_record-table tr.header th span.right span.secondary-action-container {
+    float: left;
+}
+
+.$URN$_record-table tr.header th span.right {
+    text-align: right;
+}
+.$URN$_record-table tr.header th span.secondary-action-container input {
+    position:relative;
+    top:2px;
+    left:2px;
+}
+.$URN$_record-table tr.header th span.ascending-sort,
+.$URN$_record-table tr.header th span.descending-sort,
+.$URN$_record-table tr.header th span.icon-map {
+    height:16px;
+    width:16px;
+    top:3px;
+    left:3px;
+    position:relative;
+}
+.$URN$_record-table tr.header th span.ascending-sort {
+    background:url(record_table.png) -2px 0 no-repeat;
+}
+.$URN$_record-table tr.header th span.descending-sort {
+    background:url(record_table.png) -2px -16px no-repeat;
+}
+.$URN$_record-table tr.header th span.icon-map {
+    background:url(label_icons.png) 0 0 no-repeat;
+}
+
+/**  Borders **/
+.$URN$_record-table .record-table-border-top,
+.$URN$_record-table .record-table-border-bottom,
+.$URN$_record-table .record-table-border-left,
+.$URN$_record-table .record-table-border-right {position:absolute;
+/*
+    -moz-opacity: 0.2;
+    opacity: .20;
+    filter: alpha(opacity=20);
+    */
+}
+
+.$URN$_record-table .record-table-border-top,
+.$URN$_record-table .record-table-border-bottom {
+    left:-3px;
+    right:-3px;
+    height:6px;
+}
+.$URN$_record-table .record-table-border-left,
+.$URN$_record-table .record-table-border-right {
+    top:3px;
+    bottom:3px;
+    width:6px;
+    background:blue;
+}
+.$URN$_record-table .record-table-border-top-horizontal,
+.$URN$_record-table .record-table-border-bottom-horizontal {
+    position:absolute;
+    left:6px;
+    right:6px;
+    height:6px;
+    background:blue;
+}
+.$URN$_record-table .record-table-border-top {top:-3px;}
+.$URN$_record-table .record-table-border-bottom {bottom:-3px;}
+.$URN$_record-table .record-table-border-left {left:-3px;}
+.$URN$_record-table .record-table-border-right {right:-3px;}
+.$URN$_record-table .record-table-border-top-horizontal {top:0;}
+.$URN$_record-table .record-table-border-bottom-horizontal{bottom:0;}
+
+.$URN$_record-table .record-table-border-top-left,
+.$URN$_record-table .record-table-border-top-right,
+.$URN$_record-table .record-table-border-bottom-left,
+.$URN$_record-table .record-table-border-bottom-right {
+    position:absolute;
+    width:6px;
+    height:6px;
+    background:red;
+}
+.$URN$_record-table .record-table-border-top-left {left:0;top:0;}
+.$URN$_record-table .record-table-border-top-right {right:0;top:0;}
+.$URN$_record-table .record-table-border-bottom-left {left:0;bottom:0;}
+.$URN$_record-table .record-table-border-bottom-right {right:0;bottom:0;}
+
+/* Un-comment this to see border images on
+.$URN$_record-table .record-table-border-top,
+.$URN$_record-table .record-table-border-bottom,
+.$URN$_record-table .record-table-border-left,
+.$URN$_record-table .record-table-border-right {
+    -moz-opacity: 1;
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+*/
+.$URN$_record-table .record-table-border-left {background:url(window_vrep.png) -33px 0 repeat-y;}
+.$URN$_record-table .record-table-border-right {background:url(window_vrep.png) -43px 0 repeat-y;}
+.$URN$_record-table .record-table-border-top-horizontal {background:url(window_hrep.png) 0 -53px repeat-x;}
+.$URN$_record-table .record-table-border-bottom-horizontal{background:url(window_hrep.png) 0 -63px repeat-x;}
+.$URN$_record-table .record-table-border-top-left {background:url(window.png) -11px -53px no-repeat;}
+.$URN$_record-table .record-table-border-top-right {background:url(window.png) -151px -53px no-repeat;}
+.$URN$_record-table .record-table-border-bottom-left {background:url(window.png) -11px -63px no-repeat;}
+.$URN$_record-table .record-table-border-bottom-right {background:url(window.png) -151px -63px no-repeat;}
+
+.$URN$_record-table .underlay {
+    background-color:#000000;
+    bottom:0;
+    left:0;
+    filter: alpha(opacity=20);
+    moz-opacity: 0.2;
+    opacity: .20;
+    position:absolute;
+    right:0;
+    top:0;
+}
+
+/**  This is a refernce of the styles used by getscrollbarwidth.js
+        Once rendered, the scrollbar width is the value of .scroller-width-container (100) - the clientWidth of .scroller-width
+        The resulting value will be the width of vertical scrollbars, and height of horizontal ones.
+        The markup makes three nested divs in the following order
+.scroller-width-container {
+    visibility:hidden;
+    padding:0;
+    border:0;
+    position:absolute;
+    width:100px;
+}
+.scroller-content{
+    width:auto;
+    height:10px;
+}
+.scroller-width {
+    width:auto;
+    overflow-y:scroll;
+    height:100px;
+}
+**/

@@ -1,0 +1,38 @@
+<widget name="screen"
+    factory-class="com.aviarc.framework.toronto.widget.DefaultWidgetProviderFactoryImpl" 
+    rendered-node-factory="com.aviarc.toronto.widget.core.ScreenRenderedNodeFactory">
+    
+    <attributes>
+        <attribute name="title" type="string" mandatory="n"/>
+        <attribute name="name" type="name" mandatory="n"/>
+        <attribute name="timer" type="bool" mandatory="n" default="y"/>
+
+        <attribute name="top" mandatory="n"/>
+        <attribute name="left" mandatory="n"/>
+        <attribute name="right" mandatory="n"/>
+        <attribute name="bottom" mandatory="n"/>
+        <attribute name="width" mandatory="n"/>
+        <attribute name="height" mandatory="n"/>
+        <attribute name="min-width" mandatory="n"/>
+        <attribute name="min-height" mandatory="n"/>
+        <attribute name="max-width" mandatory="n"/>
+        <attribute name="max-height" mandatory="n"/>
+
+    </attributes>
+    
+    <children allowed="y"/>
+    
+    <includes>
+        <css-include file="screen.css"/>
+        <msie6-css-include file="ie6-screen.css"/>
+        <js-include file="Screen.js"/>
+    </includes>
+    
+    <child-widgets>
+        <widget-type name="widget"/>
+        <widget-type name="behaviorgroup"/>
+    </child-widgets>
+    
+    <js-constructor>new YAHOO.com.aviarc.framework.toronto.widget.core.v2_5_0.Screen()</js-constructor>
+    
+</widget>

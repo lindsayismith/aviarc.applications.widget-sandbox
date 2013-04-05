@@ -1,0 +1,22 @@
+.$URN$_text-static {
+    font-family: arial,helvetica;
+    font-size: 12px;
+    color: black;
+    padding: 0px;
+}
+
+.$URN$_text-static-disabled {
+    color: rgb(150,150,150);
+}
+
+.$URN$_text-static-bold {
+    font-weight: bold;
+}
+
+.$URN$_text-static-center {
+    text-align: center;
+}
+
+.$URN$_text-static-right {
+    text-align: right;
+}

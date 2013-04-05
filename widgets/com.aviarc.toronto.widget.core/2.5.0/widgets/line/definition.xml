@@ -1,0 +1,17 @@
+<widget name="line"
+        factory-class="com.aviarc.framework.toronto.widget.DefaultWidgetProviderFactoryImpl"
+        container-positioning="y">
+        
+    <attributes>
+        <attribute name="name" type="name" mandatory="n"/>
+        <attribute name="height" type="number" mandatory="n" default="1" />
+        <attribute name="width" type="number" mandatory="n" default="1" />
+    </attributes>
+
+    <includes>
+        <css-include file="line.css"/>
+        <js-include file="Line.js"/>
+    </includes>
+
+    <js-constructor>new YAHOO.com.aviarc.framework.toronto.widget.core.v2_5_0.Line()</js-constructor>
+</widget>

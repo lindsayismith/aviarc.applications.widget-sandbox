@@ -1,0 +1,708 @@
+/* ------------------------------
+    Toronto Button Styles
+-------------------------------*/
+.$URN$_button {} /* Main default widget container class */
+.$URN$_button .button-anchor {
+    color: #000;
+    margin: 0 auto;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 0 auto;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: block;
+	cursor:pointer
+}
+.$URN$_button span {
+    font-weight: bold;
+}
+.$URN$_button span.button-disabled-span {
+	color: #999;
+	/* not using this as it means the images fail in IE7 - using different images and change font colour instead
+	-moz-opacity: 0.5;
+    opacity: .50;
+    filter: alpha(opacity=50);
+	*/
+}
+.$URN$_button .button-top,
+.$URN$_button .button-bottom {
+    position: absolute;
+    width: 100%;
+    height: 50%;
+}
+.$URN$_button .button-top {
+    top: 0;
+}
+.$URN$_button .button-bottom {
+    bottom: 0;
+}
+.$URN$_button .button-top-left,
+.$URN$_button .button-top-right,
+.$URN$_button .button-bottom-left,
+.$URN$_button .button-bottom-right {
+    position: absolute;
+    width: 20px;
+    height: 100%;
+}
+.$URN$_button .button-top-left {
+    top: 0;
+    left: 0;
+    margin: -3px 0 0 -3px;
+    padding: 0 0 3px 0;
+    background: url(button.png) 0 0 no-repeat;
+}
+.$URN$_button a:hover span.button-top-left,
+.$URN$_button a:focus span.button-top-left {
+    background: url(button.png) -70px 0 no-repeat;
+}
+.$URN$_button a:active span.button-top-left {
+    background: url(button.png) -140px 0 repeat-x;
+}
+.$URN$_button span.button-disabled-span .button-top-left {
+    background: url(button.png) -210px 0 no-repeat;
+}
+.$URN$_button .button-top-right {
+    top: 0;
+    right: 0;
+    margin: -3px -3px 0 0;
+    padding: 0 0 3px 0;
+    background: url(button.png) -44px 0 no-repeat;
+}
+.$URN$_button a:hover span.button-top-right,
+.$URN$_button a:focus span.button-top-right {
+    background: url(button.png) -114px 0 no-repeat;
+}
+.$URN$_button a:active span.button-top-right {
+    background: url(button.png) -184px 0 repeat-x;
+}
+.$URN$_button span.button-disabled-span .button-top-right {
+    background: url(button.png) -254px 0 no-repeat;
+}
+.$URN$_button .button-bottom-left,
+.$URN$_button .button-bottom-right {
+    bottom: 0;
+    height: 100%;
+}
+.$URN$_button .button-bottom-left {
+    background: url(button.png) 0 100% no-repeat;
+    left: 0;
+    margin: 0 0 -3px -3px;
+    padding: 3px 0 0 0;
+}
+.$URN$_button a:hover span.button-bottom-left,
+.$URN$_button a:focus span.button-bottom-left {
+    background: url(button.png) -70px 100% no-repeat;
+}
+.$URN$_button a:active span.button-bottom-left {
+    background: url(button.png) -140px 100% no-repeat;
+}
+.$URN$_button span.button-disabled-span .button-bottom-left {
+    background: url(button.png) -210px 100% no-repeat;
+}
+.$URN$_button .button-bottom-right {
+    right: 0;
+    margin: 0 -3px -3px 0;
+    padding: 3px 0 0 0;
+    background: url(button.png) -44px 100% no-repeat;
+}
+.$URN$_button a:hover span.button-bottom-right,
+.$URN$_button a:focus span.button-bottom-right {
+    background: url(button.png) -114px 100% no-repeat ;
+}
+.$URN$_button a:active span.button-bottom-right {
+    background: url(button.png) -184px 100% no-repeat;
+}
+.$URN$_button span.button-disabled-span .button-bottom-right {
+    background: url(button.png) -254px 100% no-repeat;
+}
+.$URN$_button .button-top-middle,
+.$URN$_button .button-bottom-middle {
+    position: absolute;
+    left: 17px;
+    right: 17px;
+    height: 100%;
+}
+.$URN$_button .button-top-middle {
+    top: 0;
+    margin: -3px 0 0 0;
+    padding: 0 0 3px 0;
+    background: url(button_hrep.png) 0 0 repeat-x;
+}
+.$URN$_button a:hover span.button-top-middle,
+.$URN$_button a:focus span.button-top-middle {
+    background: url(button_hrep.png) -1900px 0 no-repeat;
+}
+.$URN$_button a:active span.button-top-middle {
+    background: url(button_hrep.png) -3800px 0 no-repeat;
+}
+.$URN$_button span.button-disabled-span .button-top-middle {
+    background: url(button_hrep.png) -5700px 0 repeat-x;
+}
+.$URN$_button .button-bottom-middle {
+    bottom: 0;
+    margin: 0 0 -3px 0;
+    padding: 3px 0 0 0;
+    margin-bottom: -3px;
+    background: url(button_hrep.png) 0 100% no-repeat;
+}
+.$URN$_button a:hover span.button-bottom-middle,
+.$URN$_button a:focus span.button-bottom-middle {
+    background: url(button_hrep.png) -1900px 100% repeat-x;
+}
+.$URN$_button a:active span.button-bottom-middle {
+    background: url(button_hrep.png) -3800px 100% repeat-x;
+}
+.$URN$_button span.button-disabled-span .button-bottom-middle {
+    background: url(button_hrep.png) -5700px 100% no-repeat;
+}
+.$URN$_button .button-container {
+    position: absolute;
+    display: table;
+    height: 100%;
+    width: 100%;
+    line-height: 1em;
+    margin:0;
+    top:0;
+}
+.$URN$_button .button-container-inner {
+    position: relative;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+.$URN$_button .button-container {
+	*display:block;
+	*position:relative;
+	*width:100%;
+	*height:100%;}
+.$URN$_button .button-container-inner {
+	*top:expression(this.parentElement.clientHeight / 2 - this.offsetHeight / 2 + "px");
+	*display:block;
+	*position:relative;
+	*margin:0;
+	*padding:2px 0;
+	*border:0 solid transparent;
+	*overflow:visible;
+}
+.$URN$_button .button-container-top,
+.$URN$_button .button-container-bottom {
+	position:absolute;
+	left:50%;
+	right:50%;
+	height:20px;
+	overflow:visible;
+}
+.$URN$_button .button-container-bottom {
+	bottom:0;
+}
+.$URN$_button .button-container-left,
+.$URN$_button .button-container-right {
+	position:absolute;
+	top:50%;
+	bottom:50%;
+	width:20px;
+	overflow:visible;
+}
+.$URN$_button .button-container-right {
+	right:0;
+	left:auto;
+}
+.$URN$_button .button-container-left {
+	left:0;
+	right:auto;
+}
+.$URN$_button .button-decoration-top,
+.$URN$_button .button-decoration-left,
+.$URN$_button .button-decoration-right,
+.$URN$_button .button-decoration-bottom {
+	position:absolute;
+	width:16px;
+	height:16px;
+	display:none;
+	background:url(label_icons.png) 0 0 no-repeat;
+}
+.$URN$_button .button-decoration-top {top:4px;}
+.$URN$_button .button-decoration-bottom {bottom:4px;}
+.$URN$_button .button-decoration-left {left:4px;}
+.$URN$_button .button-decoration-right {right:4px;}
+.$URN$_button a:active, .$URN$_button a:visited, .$URN$_button a:focus{outline:none;}
+
+/*** ----------------Custom Classes Begin ---------------------------------------------------------------- ***/
+
+/* --------------- Label Size Custom Classes --------------- */
+
+/* "label_smaller" */
+.$URN$_button-label_smaller .button-container-inner {font-size: 85%;}
+
+/* "label_small" */
+.$URN$_button-label_small .button-container-inner {font-size: 95%;}
+
+/* "label_medium" */
+.$URN$_button-label_medium .button-container-inner {font-size: 105%;}
+
+/* "label_large" */
+.$URN$_button-label_large .button-container-inner {font-size: 120%;}
+
+/* "label_larger" */
+.$URN$_button-label_larger .button-container-inner {font-size: 150%;}
+
+/* "label_huge" */
+.$URN$_button-label_huge .button-container-inner {font-size: 200%;}
+
+/* --------------- Label Style Custom Classes --------------- */
+
+/* "label_italic" */
+.$URN$_button-label_italic .button-container-inner {font-style:italic;}
+
+/* "label_lite" */
+.$URN$_button-label_lite .button-container-inner {font-weight:normal;}
+
+/* "hyperlink" - label only button with no background images for all states
+	- it includes underline on hover and basic text color changes. */
+.$URN$_button-hyperlink a span.button-top-left,
+.$URN$_button-hyperlink a span.button-top-right,
+.$URN$_button-hyperlink a span.button-bottom-left,
+.$URN$_button-hyperlink a span.button-bottom-right,
+.$URN$_button-hyperlink a span.button-top-middle,
+.$URN$_button-hyperlink a span.button-bottom-middle,
+.$URN$_button-hyperlink a span.button-top-left,
+.$URN$_button-hyperlink a span.button-top-right,
+.$URN$_button-hyperlink a span.button-bottom-left,
+.$URN$_button-hyperlink a span.button-bottom-right,
+.$URN$_button-hyperlink a span.button-top-middle,
+.$URN$_button-hyperlink a span.button-bottom-middle,
+.$URN$_button-hyperlink a:hover span.button-top-left,
+.$URN$_button-hyperlink a:hover span.button-top-right,
+.$URN$_button-hyperlink a:hover span.button-bottom-left,
+.$URN$_button-hyperlink a:hover span.button-bottom-right,
+.$URN$_button-hyperlink a:hover span.button-top-middle,
+.$URN$_button-hyperlink a:hover span.button-bottom-middle,
+.$URN$_button-hyperlink a:focus span.button-top-left,
+.$URN$_button-hyperlink a:focus span.button-top-right,
+.$URN$_button-hyperlink a:focus span.button-bottom-left,
+.$URN$_button-hyperlink a:focus span.button-bottom-right,
+.$URN$_button-hyperlink a:focus span.button-top-middle,
+.$URN$_button-hyperlink a:focus span.button-bottom-middle {background: none;}
+.$URN$_button-hyperlink a:link span.button-container-inner,
+.$URN$_button-hyperlink a:visited span.button-container-inner {color:#00e;}/* colour when button is not interacted with */
+.$URN$_button-hyperlink a:hover span.button-container-inner,
+.$URN$_button-hyperlink a:focus span.button-container-inner,
+.$URN$_button-hyperlink a:active span.button-container-inner {
+	color:#66f;
+	text-decoration:underline;
+}/* effects for when button is either hovered by mouse or given focus some other way */
+.$URN$_button-hyperlink a.button-anchor:active span.button-container-inner {color:#000;}/* colour when button is pressed */
+
+/* "hyperlink_no_underline" - No underline text decoration on all states - to be used together with "hyperlink" custom class */
+.$URN$_button-hyperlink_no_underline a:link span.button-container-inner,
+.$URN$_button-hyperlink_no_underline a:visited div.button-container-inner,
+.$URN$_button-hyperlink_no_underline a:hover div.button-container-inner,
+.$URN$_button-hyperlink_no_underline a:focus div.button-container-inner,
+.$URN$_button-hyperlink_no_underline a:active div.button-container-inner {text-decoration:none;}
+
+/* "label_green"
+     Define custom classes with specific colors for other label only - can be used on it's own or together with many custom classes on the button */
+.$URN$_button-label_green a:link span.button-container-inner,
+.$URN$_button-label_green a:visited span.button-container-inner {color:#0c0;}
+.$URN$_button-label_green a:hover span.button-container-inner,
+.$URN$_button-label_green a:focus span.button-container-inner,
+.$URN$_button-label_green a:active span.button-container-inner {color:#3c3;}
+.$URN$_button-label_green a:active span.button-container-inner {/*color:#e00;*/} /* Change the hex value here if you would like to have a different colour for text when button is pressed */
+
+/* copy/paste new color options here based on above "hyperlink_green" example */
+
+/* --------------- Button Framing Custom Classes --------------- */
+
+/* "red" - changes the borders and background images of the button to use different images */
+.$URN$_button-red a span.button-container-inner {color:#fff;}
+.$URN$_button-red .button-top-left,
+.$URN$_button-red a:hover span.button-top-left,
+.$URN$_button-red a:focus span.button-top-left,
+.$URN$_button-red a:active span.button-top-left,
+.$URN$_button-red span.button-disabled-span span.button-top-left,
+.$URN$_button-red .button-top-right,
+.$URN$_button-red a:hover span.button-top-right,
+.$URN$_button-red a:focus span.button-top-right,
+.$URN$_button-red a:active span.button-top-right,
+.$URN$_button-red span.button-disabled-span span.button-top-right,
+.$URN$_button-red .button-bottom-left,
+.$URN$_button-red a:hover span.button-bottom-left,
+.$URN$_button-red a:focus span.button-bottom-left,
+.$URN$_button-red a:active span.button-bottom-left,
+.$URN$_button-red span.button-disabled-span span.button-bottom-left,
+.$URN$_button-red .button-bottom-right,
+.$URN$_button-red a:hover span.button-bottom-right,
+.$URN$_button-red a:focus span.button-bottom-right,
+.$URN$_button-red a:active span.button-bottom-right,
+.$URN$_button-red span.button-disabled-span span.button-bottom-right {
+    background-image: url(red/button.png);
+}
+.$URN$_button-red a:hover span.button-top-middle,
+.$URN$_button-red a:focus span.button-top-middle,
+.$URN$_button-red a:active span.button-top-middle,
+.$URN$_button-red .button-top-middle,
+.$URN$_button-red span.button-disabled-span span.button-top-middle,
+.$URN$_button-red .button-bottom-middle,
+.$URN$_button-red a:hover span.button-bottom-middle,
+.$URN$_button-red a:focus span.button-bottom-middle,
+.$URN$_button-red a:active span.button-bottom-middle,
+.$URN$_button-red span.button-disabled-span span.button-bottom-middle {
+    background-image: url(red/button_hrep.png);
+}
+
+/* "green" - changes the borders and background images of the button to use different images */
+.$URN$_button-green a span.button-container-inner {color:#fff;}
+.$URN$_button-green .button-top-left,
+.$URN$_button-green a:hover span.button-top-left,
+.$URN$_button-green a:focus span.button-top-left,
+.$URN$_button-green a:active span.button-top-left,
+.$URN$_button-green span.button-disabled-span span.button-top-left,
+.$URN$_button-green .button-top-right,
+.$URN$_button-green a:hover span.button-top-right,
+.$URN$_button-green a:focus span.button-top-right,
+.$URN$_button-green a:active span.button-top-right,
+.$URN$_button-green span.button-disabled-span span.button-top-right,
+.$URN$_button-green .button-bottom-left,
+.$URN$_button-green a:hover span.button-bottom-left,
+.$URN$_button-green a:focus span.button-bottom-left,
+.$URN$_button-green a:active span.button-bottom-left,
+.$URN$_button-green span.button-disabled-span span.button-bottom-left,
+.$URN$_button-green .button-bottom-right,
+.$URN$_button-green a:hover span.button-bottom-right,
+.$URN$_button-green a:focus span.button-bottom-right,
+.$URN$_button-green a:active span.button-bottom-right,
+.$URN$_button-green span.button-disabled-span span.button-bottom-right {
+    background-image: url(green/button.png);
+}
+.$URN$_button-green a:hover span.button-top-middle,
+.$URN$_button-green a:focus span.button-top-middle,
+.$URN$_button-green a:active span.button-top-middle,
+.$URN$_button-green .button-top-middle,
+.$URN$_button-green span.button-disabled-span span.button-top-middle,
+.$URN$_button-green .button-bottom-middle,
+.$URN$_button-green a:hover span.button-bottom-middle,
+.$URN$_button-green a:focus span.button-bottom-middle,
+.$URN$_button-green a:active span.button-bottom-middle,
+.$URN$_button-green span.button-disabled-span span.button-bottom-middle {
+    background-image: url(green/button_hrep.png);
+}
+
+/* "blue" - changes the borders and background images of the button to use different images */
+.$URN$_button-blue a span.button-container-inner {color:#fff;}
+.$URN$_button-blue .button-top-left,
+.$URN$_button-blue a:hover span.button-top-left,
+.$URN$_button-blue a:focus span.button-top-left,
+.$URN$_button-blue a:active span.button-top-left,
+.$URN$_button-blue span.button-disabled-span span.button-top-left,
+.$URN$_button-blue .button-top-right,
+.$URN$_button-blue a:hover span.button-top-right,
+.$URN$_button-blue a:focus span.button-top-right,
+.$URN$_button-blue a:active span.button-top-right,
+.$URN$_button-blue span.button-disabled-span span.button-top-right,
+.$URN$_button-blue .button-bottom-left,
+.$URN$_button-blue a:hover span.button-bottom-left,
+.$URN$_button-blue a:focus span.button-bottom-left,
+.$URN$_button-blue a:active span.button-bottom-left,
+.$URN$_button-blue span.button-disabled-span span.button-bottom-left,
+.$URN$_button-blue .button-bottom-right,
+.$URN$_button-blue a:hover span.button-bottom-right,
+.$URN$_button-blue a:focus span.button-bottom-right,
+.$URN$_button-blue a:active span.button-bottom-right,
+.$URN$_button-blue span.button-disabled-span span.button-bottom-right {
+    background-image: url(blue/button.png);
+}
+.$URN$_button-blue a:hover span.button-top-middle,
+.$URN$_button-blue a:focus span.button-top-middle,
+.$URN$_button-blue a:active span.button-top-middle,
+.$URN$_button-blue .button-top-middle,
+.$URN$_button-blue span.button-disabled-span span.button-top-middle,
+.$URN$_button-blue .button-bottom-middle,
+.$URN$_button-blue a:hover span.button-bottom-middle,
+.$URN$_button-blue a:focus span.button-bottom-middle,
+.$URN$_button-blue a:active span.button-bottom-middle,
+.$URN$_button-blue span.button-disabled-span span.button-bottom-middle {
+    background-image: url(blue/button_hrep.png);
+}
+
+/* "yellow" - changes the borders and background images of the button to use different images */
+.$URN$_button-yellow .button-top-left,
+.$URN$_button-yellow a:hover span.button-top-left,
+.$URN$_button-yellow a:focus span.button-top-left,
+.$URN$_button-yellow a:active span.button-top-left,
+.$URN$_button-yellow span.button-disabled-span span.button-top-left,
+.$URN$_button-yellow .button-top-right,
+.$URN$_button-yellow a:hover span.button-top-right,
+.$URN$_button-yellow a:focus span.button-top-right,
+.$URN$_button-yellow a:active span.button-top-right,
+.$URN$_button-yellow span.button-disabled-span span.button-top-right,
+.$URN$_button-yellow .button-bottom-left,
+.$URN$_button-yellow a:hover span.button-bottom-left,
+.$URN$_button-yellow a:focus span.button-bottom-left,
+.$URN$_button-yellow a:active span.button-bottom-left,
+.$URN$_button-yellow span.button-disabled-span span.button-bottom-left,
+.$URN$_button-yellow .button-bottom-right,
+.$URN$_button-yellow a:hover span.button-bottom-right,
+.$URN$_button-yellow a:focus span.button-bottom-right,
+.$URN$_button-yellow a:active span.button-bottom-right,
+.$URN$_button-yellow span.button-disabled-span span.button-bottom-right {
+    background-image: url(yellow/button.png);
+}
+.$URN$_button-yellow a:hover span.button-top-middle,
+.$URN$_button-yellow a:focus span.button-top-middle,
+.$URN$_button-yellow a:active span.button-top-middle,
+.$URN$_button-yellow .button-top-middle,
+.$URN$_button-yellow span.button-disabled-span span.button-top-middle,
+.$URN$_button-yellow .button-bottom-middle,
+.$URN$_button-yellow a:hover span.button-bottom-middle,
+.$URN$_button-yellow a:focus span.button-bottom-middle,
+.$URN$_button-yellow a:active span.button-bottom-middle,
+.$URN$_button-yellow span.button-disabled-span span.button-bottom-middle {
+    background-image: url(yellow/button_hrep.png);
+}
+
+/* "black" - changes the borders and background images of the button to use different images */
+.$URN$_button-black a span.button-container-inner {color:#fff;}
+.$URN$_button-black .button-top-left,
+.$URN$_button-black a:hover span.button-top-left,
+.$URN$_button-black a:focus span.button-top-left,
+.$URN$_button-black a:active span.button-top-left,
+.$URN$_button-black span.button-disabled-span span.button-top-left,
+.$URN$_button-black .button-top-right,
+.$URN$_button-black a:hover span.button-top-right,
+.$URN$_button-black a:focus span.button-top-right,
+.$URN$_button-black a:active span.button-top-right,
+.$URN$_button-black span.button-disabled-span span.button-top-right,
+.$URN$_button-black .button-bottom-left,
+.$URN$_button-black a:hover span.button-bottom-left,
+.$URN$_button-black a:focus span.button-bottom-left,
+.$URN$_button-black a:active span.button-bottom-left,
+.$URN$_button-black span.button-disabled-span span.button-bottom-left,
+.$URN$_button-black .button-bottom-right,
+.$URN$_button-black a:hover span.button-bottom-right,
+.$URN$_button-black a:focus span.button-bottom-right,
+.$URN$_button-black a:active span.button-bottom-right,
+.$URN$_button-black span.button-disabled-span span.button-bottom-right {
+    background-image: url(black/button.png);
+}
+.$URN$_button-black a:hover span.button-top-middle,
+.$URN$_button-black a:focus span.button-top-middle,
+.$URN$_button-black a:active span.button-top-middle,
+.$URN$_button-black .button-top-middle,
+.$URN$_button-black span.button-disabled-span span.button-top-middle,
+.$URN$_button-black .button-bottom-middle,
+.$URN$_button-black a:hover span.button-bottom-middle,
+.$URN$_button-black a:focus span.button-bottom-middle,
+.$URN$_button-black a:active span.button-bottom-middle,
+.$URN$_button-black span.button-disabled-span span.button-bottom-middle {
+    background-image: url(black/button_hrep.png);
+}
+
+/* "current" - displays button as depressed to indicate button is current or active. Still uses normal hover state. */
+.$URN$_button-current .button-bottom-middle {background-position:-3800px 100%;}
+.$URN$_button-current .button-top-middle {background-position:-3800px 0;}
+.$URN$_button-current .button-bottom-left {background-position:-140px 100%;}
+.$URN$_button-current .button-bottom-right {background-position:-184px 100%;}
+.$URN$_button-current .button-top-right {background-position:-184px 0;}
+.$URN$_button-current .button-top-left {background-position:-140px 0;}
+
+/* "down" - use for giving a toggle effect to a button by adding or removing this class. Allstates appear as depressed. */
+.$URN$_button-down .button-bottom-middle,
+.$URN$_button-down a:hover span.button-bottom-middle,
+.$URN$_button-down a:focus span.button-bottom-middle,
+.$URN$_button-down a:active span.button-bottom-middle {background-position:-3800px 100%;}
+.$URN$_button-down .button-top-middle,
+.$URN$_button-down a:hover span.button-top-middle,
+.$URN$_button-down a:focus span.button-top-middle,
+.$URN$_button-down a:active span.button-top-middle {background-position:-3800px 0;}
+.$URN$_button-down .button-bottom-left,
+.$URN$_button-down a:hover span.button-bottom-left,
+.$URN$_button-down a:focus span.button-bottom-left,
+.$URN$_button-down a:active span.button-bottom-left {background-position:-140px 100%;}
+.$URN$_button-down .button-bottom-right,
+.$URN$_button-down a:hover span.button-bottom-right,
+.$URN$_button-down a:focus span.button-bottom-right,
+.$URN$_button-down a:active span.button-bottom-right {background-position:-184px 100%;}
+.$URN$_button-down .button-top-right,
+.$URN$_button-down a:hover span.button-top-right,
+.$URN$_button-down a:focus span.button-top-right,
+.$URN$_button-down a:active span.button-top-right {background-position:-184px 0;}
+.$URN$_button-down .button-top-left,
+.$URN$_button-down a:hover span.button-top-left,
+.$URN$_button-down a:focus span.button-top-left,
+.$URN$_button-down a:active span.button-top-left {background-position:-140px 0;}
+
+/* "hover_outline" -  create an outline indicator that borders the shape of the button on hover - to be used together with "hyperlink"
+	Note - has a separate set of rules for ie
+	Note - can only be used together with the "hyperlink" or "hovernobg" custom class while using ie6 and ie7 
+	Note - can be used on own if not supporting ie7 or below */
+.$URN$_button-hover_outline a:hover span.button-container-inner,
+.$URN$_button-hover_outline a:focus span.button-container-inner,
+.$URN$_button-hover_outline a:active span.button-container-inner {border:1px dotted #ddd;}
+
+/* "hover_outline" -  the following is the ie6 and ie7 only solution - need to move this to ie6 and ie7 stylesheets respectively 
+	Note - this class can only be used together with the "hyperlink" custom class while using ie6 and ie7 */
+.$URN$_button-hover_outline a:hover div.button-container-inner,
+.$URN$_button-hover_outline a:focus div.button-container-inner,
+.$URN$_button-hover_outline a:active div.button-container-inner {*border:0;}
+.$URN$_button-hover_outline a:hover div.button-top-left,
+.$URN$_button-hover_outline a:hover div.button-top-right,
+.$URN$_button-hover_outline a:hover div.button-bottom-left,
+.$URN$_button-hover_outline a:hover div.button-bottom-right,
+.$URN$_button-hover_outline a:hover div.button-top-middle,
+.$URN$_button-hover_outline a:hover div.button-bottom-middle {
+	*margin:0;
+	*border-style:dotted;
+	*border-color:#ddd;
+	*border-width:0;
+}
+.$URN$_button-hover_outline a:hover div.button-top-left,
+.$URN$_button-hover_outline a:focus div.button-top-left,
+.$URN$_button-hover_outline a:active div.button-top-left {
+	*border-top:1px;
+	*border-left:1px;
+}
+.$URN$_button-hover_outline a:hover div.button-top-right,
+.$URN$_button-hover_outline a:focus div.button-top-right,
+.$URN$_button-hover_outline a:active div.button-top-right {
+	*border-top:1px;
+	*border-right:1px;
+}
+.$URN$_button-hover_outline a:hover div.button-bottom-left,
+.$URN$_button-hover_outline a:focus div.button-bottom-left,
+.$URN$_button-hover_outline a:active div.button-bottom-left {
+	*border-bottom:1px;
+	*border-left:1px;
+}
+.$URN$_button-hover_outline a:hover div.button-bottom-right,
+.$URN$_button-hover_outline a:focus div.button-bottom-left,
+.$URN$_button-hover_outline a:active div.button-bottom-left {
+	*border-bottom:1px;
+	*border-right:1px;
+}
+.$URN$_button-hover_outline a:hover div.button-top-middle,
+.$URN$_button-hover_outline a:focus div.button-top-middle,
+.$URN$_button-hover_outline a:active div.button-top-middle {
+	*border-top:1px;
+}
+.$URN$_button-hover_outline a:hover div.button-bottom-middle,
+.$URN$_button-hover_outline a:focus div.button-bottom-middle,
+.$URN$_button-hover_outline a:active div.button-bottom-middle {
+	*border-bottom:1px;
+}
+
+/* "linknobg" - No background images for button before hover or active states */
+.$URN$_button-linknobg .button-top-left,
+.$URN$_button-linknobg .button-top-right,
+.$URN$_button-linknobg .button-bottom-left,
+.$URN$_button-linknobg .button-bottom-right,
+.$URN$_button-linknobg .button-top-middle,
+.$URN$_button-linknobg .button-bottom-middle,
+.$URN$_button-linknobg span.button-disabled-span .button-top-left,
+.$URN$_button-linknobg span.button-disabled-span .button-top-right,
+.$URN$_button-linknobg span.button-disabled-span .button-bottom-left,
+.$URN$_button-linknobg span.button-disabled-span .button-bottom-right,
+.$URN$_button-linknobg span.button-disabled-span .button-top-middle,
+.$URN$_button-linknobg span.button-disabled-span .button-bottom-middle {
+	background-image: none;
+}
+
+/* "hovernobg" - No background images for button on hover and active states */
+.$URN$_button-hovernobg a:hover span.button-top-left,
+.$URN$_button-hovernobg a:hover span.button-top-right,
+.$URN$_button-hovernobg a:hover span.button-bottom-left,
+.$URN$_button-hovernobg a:hover span.button-bottom-right,
+.$URN$_button-hovernobg a:hover span.button-top-middle,
+.$URN$_button-hovernobg a:hover span.button-bottom-middle,
+.$URN$_button-hovernobg a:focus span.button-top-left,
+.$URN$_button-hovernobg a:focus span.button-top-right,
+.$URN$_button-hovernobg a:focus span.button-bottom-left,
+.$URN$_button-hovernobg a:focus span.button-bottom-right,
+.$URN$_button-hovernobg a:focus span.button-top-middle,
+.$URN$_button-hovernobg a:focus span.button-bottom-middle {
+	background-image: none;
+}
+
+/* "menu" - makes only the icon label visible before hover / focus */
+.$URN$_button-menu .button-top-left,
+.$URN$_button-menu .button-top-right,
+.$URN$_button-menu .button-bottom-left,
+.$URN$_button-menu .button-bottom-right,
+.$URN$_button-menu .button-top-middle,
+.$URN$_button-menu .button-bottom-middle {
+	background-image: none;
+}
+/* Turn off all backgrounds when disabled */
+.$URN$_button-menu span.button-disabled-span .button-top,
+.$URN$_button-menu span.button-disabled-span .button-bottom {background:none;display:none;}
+
+/* "icon_top" and "icon_bottom"*/
+.$URN$_button-icon_top .button-container-inner {padding-top:20px;}
+.$URN$_button-icon_bottom .button-container-inner {padding-bottom:20px;}
+.$URN$_button-icon_top .button-decoration-top,
+.$URN$_button-icon_bottom .button-decoration-bottom {margin:0 0 0 -8px;display:block;overflow:visible;}
+.$URN$_button .button-container-top,
+.$URN$_button .button-container-bottom {
+	*padding:0 20px;
+	*margin-left:-20px;
+}
+
+/* "icon_left" and "icon_right" */
+.$URN$_button-icon_right .button-container-inner {padding-right:20px;}
+.$URN$_button-icon_left .button-container-inner {padding-left:20px;}
+.$URN$_button-icon_left .button-decoration-left,
+.$URN$_button-icon_right .button-decoration-right {margin:-8px 0 0 0;display:block;overflow:visible;}
+.$URN$_button-icon_left .button-container-inner {*padding-left:20px;}
+.$URN$_button-icon_right .button-container-inner {*padding-right:20px;}
+.$URN$_button .button-container-left,
+.$URN$_button .button-container-right {
+	*padding:20px 0;
+	*margin-top:-10px;
+}
+.$URN$_button .button-decoration-left,
+.$URN$_button .button-decoration-right {*top:10px;}
+
+/* "icon" and "menu" - icon only labels*/
+.$URN$_button-icon .button-container,
+.$URN$_button-menu .button-container {
+    margin:0;
+    line-height:0;
+	position:absolute;
+	display:block;
+}
+.$URN$_button-icon .button-container-inner,
+.$URN$_button-menu .button-container-inner {
+    position: absolute;
+    display:block;
+	top:50%;
+	bottom:50%;
+	left:50%;
+	right:50%;
+    width:16px;
+    height:16px;
+	overflow:hidden;
+    text-indent:-9999px;
+    margin:-8px 0 0 -8px;
+	padding:0;
+	background:url(label_icons.png) 0 0 no-repeat;
+}
+
+/* Define custom class with specific image & sprite co-ordinates here - to be used together with "icon", "icon_top",  "icon_left", "icon_right", "icon_bottom" custom classes 
+	Note: use these selectively for your classes/icons to save bytes */
+/* "icon_export", "icon_export_top", "icon_export_left", "icon_export_right", "icon_export_bottom"*/
+.$URN$_button-icon_export .button-container-inner,
+.$URN$_button-icon_top_export .button-decoration-top,
+.$URN$_button-icon_left_export .button-decoration-left,
+.$URN$_button-icon_right_export .button-decoration-right,
+.$URN$_button-icon_bottom_export .button-decoration-bottom {background: url(label_icons.png) 0 -176px no-repeat;}
+.$URN$_button-icon_export span.button-disabled-span .button-container-inner,
+.$URN$_button-icon_top_export span.button-disabled-span .button-decoration-top,
+.$URN$_button-icon_left_export span.button-disabled-span .button-decoration-left,
+.$URN$_button-icon_right_export span.button-disabled-span .button-decoration-right,
+.$URN$_button-icon_bottom_export span.button-disabled-span .button-decoration-bottom {background: url(label_icons.png) 0 -192px no-repeat;}
+
+
+/*** ----------------Custom Classes End ---------------------------------------------------------------- ***/
+
+
+

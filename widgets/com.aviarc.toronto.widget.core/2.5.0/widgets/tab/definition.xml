@@ -1,0 +1,26 @@
+<widget name="tab"
+        factory-class="com.aviarc.framework.toronto.widget.DefaultWidgetProviderFactoryImpl"
+        element-validator-class="com.aviarc.toronto.widget.core.validation.TabElementValidator"
+        rendered-node-factory="com.aviarc.toronto.widget.core.TabRenderedNodeFactory">
+    
+    <attributes>
+<!--
+        <attribute name="visible" mandatory="n" default="y" type="bool"/>
+        <attribute name="tooltip" mandatory="n"/>
+-->
+        <attribute name="enabled" mandatory="n" default="y" type="bool"/>
+        <attribute name="class" mandatory="n" type="classlist"/>
+        <attribute name="label" mandatory="n"/>
+        <attribute name="label-left" mandatory="n"/>
+        <attribute name="label-right" mandatory="n"/>
+    </attributes>
+    
+    <includes>
+        <js-include file="Tab.js"/>
+        <css-include file="tab.css"/>
+        <msie6-css-include file="ie6-tab.css"/>
+    </includes>
+
+    <children allowed="y"/>
+
+</widget>

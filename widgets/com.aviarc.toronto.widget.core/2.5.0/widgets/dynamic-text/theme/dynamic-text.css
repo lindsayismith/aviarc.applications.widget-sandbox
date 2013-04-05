@@ -1,0 +1,22 @@
+.$URN$_dynamic-text {
+    font-family: arial,helvetica;
+    font-size: 12px;
+    color: black;
+    padding: 0px;
+}
+
+.$URN$_dynamic-text-disabled {
+    color: rgb(150,150,150);
+}
+
+.$URN$_dynamic-text-bold {
+    font-weight: bold;
+}
+
+.$URN$_dynamic-text-center {
+    text-align: center;
+}
+
+.$URN$_dynamic-text-right {
+    text-align: right;
+}

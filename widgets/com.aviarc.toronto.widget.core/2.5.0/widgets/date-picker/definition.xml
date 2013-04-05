@@ -1,0 +1,26 @@
+<widget name="date-picker"
+        factory-class="com.aviarc.framework.toronto.widget.DefaultWidgetProviderFactoryImpl"
+        container-positioning="y">
+    
+    <attributes>
+        <attribute name="name" type="name" mandatory="n"/>
+        <attribute name="visible" default="y" mandatory="n" type="bool"/>
+        <attribute name="enabled" default="y" mandatory="n" type="bool"/>
+        <attribute name="field" mandatory="y" type="field"/>
+        <attribute name="min-date" mandatory="n"/>
+        <attribute name="max-date" mandatory="n"/>
+        <attribute name="title" default="Choose a date:" mandatory="n"/>
+        <attribute name="mandatory" default="n" mandatory="n" type="bool"/>
+        <attribute name="popup" default="n" mandatory="n" type="bool"/>
+    </attributes>
+    
+    <includes>
+        <js-include file="DatePicker.js"/>
+        <js-include file="include/calendar.js"/>
+        <css-include file="date-picker.css"/>
+        <msie6-css-include file="ie6-date-picker.css"/>
+    </includes>
+    
+    <js-constructor>new YAHOO.com.aviarc.framework.toronto.widget.core.v2_5_0.DatePicker()</js-constructor>
+    
+</widget>

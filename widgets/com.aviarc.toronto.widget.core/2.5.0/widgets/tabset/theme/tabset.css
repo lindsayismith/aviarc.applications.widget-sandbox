@@ -1,0 +1,212 @@
+/**
+   Hidden tabs are hidden
+**/
+ul.$URN$_tabset-tablist li.$URN$_hidden {
+    display: none;
+}
+
+/**
+   The inactive tab row
+   Height zero so that we get hover effects on
+**/
+.$URN$_tabset-inactive-tab-row {
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    height:0;
+    background: transparent none repeat scroll 0%;
+}
+
+/**
+   The active tab row
+   Height zero so that we get hover effects on the inactive row underneath
+*/
+.$URN$_tabset-active-tab-row {
+    position:absolute;
+    top:-27px;
+    left:0;
+    right:0;
+    height:0;
+    background: transparent none repeat scroll 0%;
+}
+/**
+   Height zero so that we get hover effects on the inactive row below the active one
+**/
+ul.$URN$_tabset-tablist {
+    height:0;
+    margin:0;
+    padding:0;
+    padding-left:12px;
+}
+ul.$URN$_tabset-tablist li {
+    float:left;
+    position:relative;
+    display:inline;
+}
+
+
+
+/**
+   The body section of the tabset;
+   We are 27 pixels from the top as this is the height of the
+   inactive tab images.  We will extend 3 pixels into this space
+   with our transparencies.
+*/
+.$URN$_tabset-body {
+    position: absolute;
+    top: 27px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+}
+
+.$URN$_tabset-background {
+    position: absolute;
+    left: 3px;
+    top: 3px;
+    right: 3px;
+    bottom: 3px;
+    background-color: #d9d9d9;
+}
+
+/**
+   Top and bottom rows are 6 pixels high each - 3 for the edge and 3 for transparency
+**/
+.$URN$_tabset-body-top-left,
+.$URN$_tabset-body-top-right,
+.$URN$_tabset-body-top-horizontal,
+.$URN$_tabset-body-top,
+.$URN$_tabset-body-bottom,
+.$URN$_tabset-body-bottom-left,
+.$URN$_tabset-body-bottom-right,
+.$URN$_tabset-body-bottom-horizontal{
+    position:absolute;
+    height:6px;
+}
+/**
+   -3px puts the visible edge where we want, with the 3 pixel transparency hanging over.
+*/
+.$URN$_tabset-body-top{
+    left: 0;
+    top:-3px;
+    width:100%;
+}
+/**
+   Bottom -3 for the transparent edge.
+*/
+.$URN$_tabset-body-bottom{
+    left:0;
+    bottom: -3px;
+    width:100%;
+}
+.$URN$_tabset-body-top-left,
+.$URN$_tabset-body-top-right,
+.$URN$_tabset-body-bottom-left,
+.$URN$_tabset-body-bottom-right{
+    width:8px;
+    top:0;
+}
+
+/**
+   -3px for transparency
+*/
+.$URN$_tabset-body-top-left,
+.$URN$_tabset-body-bottom-left {
+    left: -3px;
+}
+.$URN$_tabset-body-top-right,
+.$URN$_tabset-body-bottom-right {
+    right: -3px;
+}
+
+.$URN$_tabset-body-top-left {
+    background:url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.5.0:window/window.png) -11px -53px no-repeat;
+}
+.$URN$_tabset-body-top-right{
+    background:url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.5.0:window/window.png) -149px -53px no-repeat;
+}
+.$URN$_tabset-body-bottom-left{
+    background:url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.5.0:window/window.png) -11px -63px no-repeat;
+}
+.$URN$_tabset-body-bottom-right{
+    background:url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.5.0:window/window.png) -149px -63px no-repeat;
+}
+/**
+   Corners are 6 wide, minus 3 for buffer is 3px
+*/
+.$URN$_tabset-body-top-horizontal,
+.$URN$_tabset-body-bottom-horizontal{
+    top:0;
+    left:5px;
+    right:5px;
+}
+.$URN$_tabset-body-top-horizontal{
+    background:url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.5.0:window/window_hrep.png) 0 -53px repeat-x;
+}
+.$URN$_tabset-body-bottom-horizontal{
+    background:url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.5.0:window/window_hrep.png) 0 -63px repeat-x;
+}
+
+/**
+   Top and bottom are 3 since tops and bottoms are 6 height offset by 3
+*/
+.$URN$_tabset-body-left,
+.$URN$_tabset-body-right{
+    position:absolute;
+    top:3px;
+    bottom:3px;
+    width:6px;
+}
+
+/**
+   -3px for transparency
+*/
+.$URN$_tabset-body-left{
+    left:-3px;
+    background:url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.5.0:window/window_vrep.png) -33px 0 repeat-y;
+}
+.$URN$_tabset-body-right{
+    right:-3px;
+    background:url(../urn:aviarc:widget:com.aviarc.toronto.widget.core:2.5.0:window/window_vrep.png) -43px 0 repeat-y;
+}
+
+.$URN$_tabset-body-content,
+.$URN$_tabset-tab-content-active,
+.$URN$_tabset-tab-content-inactive,
+.$URN$_tabset-tab-content-disabled,
+.$URN$_tabset-tab-content-hidden {
+    position: absolute !important;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    overflow:auto;
+}
+
+.$URN$_tabset-tab-content-inactive,
+.$URN$_tabset-tab-content-disabled,
+.$URN$_tabset-tab-content-hidden {
+    display: none;
+}
+
+
+
+.$URN$_tabset-scroller {
+    margin-top: 4px;
+    width: 6px;
+    height: 20px;
+    background: black;
+}
+.$URN$_tabset-scroller-disabled {
+    background: grey;
+}
+
+.$URN$_tabset-scroller-left {
+    float: left;
+    margin-left: 2px;
+}
+.$URN$_tabset-scroller-right {
+    float: right;
+    margin-right: 2px;
+}

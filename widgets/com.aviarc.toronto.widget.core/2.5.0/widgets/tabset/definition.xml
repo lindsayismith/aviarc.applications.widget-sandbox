@@ -1,0 +1,22 @@
+<widget name="tabset"
+        factory-class="com.aviarc.framework.toronto.widget.DefaultWidgetProviderFactoryImpl"
+        rendered-node-factory="com.aviarc.toronto.widget.core.TabsetRenderedNodeFactory"
+        element-validator-class="com.aviarc.toronto.widget.core.validation.TabsetElementValidator"
+        container-positioning="y">
+
+    <attributes>
+        <attribute name="active-tab-field" mandatory="n" type="field"/>
+        <attribute name="current-tab-index" mandatory="n" type="number"/>
+        <attribute name="activate-all-tabs" mandatory="n" type="boolean" default="n"/>
+    </attributes>
+
+    <includes>
+        <js-include file="Tabset.js"/>
+        <css-include file="tabset.css"/>
+        <msie6-css-include file="ie6-tabset.css"/>
+    </includes>
+
+    <children allowed="y"/>
+
+    <!-- the active-tab-field specifies the dataset field used to determine which tab is the foremost -->
+</widget>

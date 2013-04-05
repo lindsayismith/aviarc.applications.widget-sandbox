@@ -1,0 +1,8 @@
+<widget name="subscreen" 
+    factory-class="com.aviarc.framework.toronto.widget.DefaultWidgetProviderFactoryImpl" 
+    rendered-node-factory="com.aviarc.toronto.widget.core.SubscreenRenderedNodeFactory" 
+    container-positioning="y">
+  <attributes>
+        <attribute name="screen" mandatory="y"/>
+  </attributes>
+</widget>

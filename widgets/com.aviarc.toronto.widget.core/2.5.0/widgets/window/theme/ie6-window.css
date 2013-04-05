@@ -1,0 +1,47 @@
+iframe.$URN$_window-iframe {
+    display: inline;
+    border: 0;
+    position: absolute;
+    overflow: hidden;
+    height: expression(this.parentElement.clientHeight);
+    width: expression(this.parentElement.clientWidth);
+    top: 0;
+    left: 0;
+    filter: alpha(opacity=0);
+}
+
+/* .$URN$_ext-shim{position:absolute;visibility:hidden;left:0;top:0;overflow:hidden;} */
+
+.$URN$_window-middle, .$URN$_window-body {
+    height: expression(this.parentElement.clientHeight - 47);
+	width: expression(this.parentElement.clientWidth);
+}
+
+.$URN$_window-background {
+    height: expression(this.parentElement.clientHeight - 40);
+	top:25px;
+    width: expression(this.parentElement.clientWidth - 1);
+}
+.$URN$_window-content{
+	height: expression(this.parentElement.clientHeight);
+	width: expression(this.parentElement.clientWidth - 1);
+}
+.$URN$_window-top-middle,
+.$URN$_window-bottom-middle{
+	width: expression(this.parentElement.clientWidth - 86);
+}
+.$URN$_window-bottom-middle{
+}
+
+.$URN$_window-middle-left,
+.$URN$_window-middle-right {	
+    line-height: 0px;
+    font-size: 0px;
+}
+
+div.$URN$_window-icon-search-icon,
+div.$URN$_window-icon-search-icon:hover,
+div.$URN$_window-icon-debugger-icon,
+div.$URN$_window-icon-debugger-icon:hover {
+    background-image: url(../Revision2:button/label_icons.png);
+}

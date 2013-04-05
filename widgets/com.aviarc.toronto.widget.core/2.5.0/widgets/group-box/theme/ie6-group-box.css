@@ -1,0 +1,93 @@
+.$URN$_group-box,
+.$URN$_group-box-content {
+    width: expression(this.parentElement.clientWidth);
+    height: expression(this.parentElement.clientHeight);
+}
+.$URN$_group-box-background {
+    width: expression(this.parentElement.clientWidth - 4);
+    height: expression(this.parentElement.clientHeight - 4);
+}
+.$URN$_group-box-top,
+.$URN$_group-box-bottom {
+    width: expression(this.parentElement.clientWidth - 6);
+}
+.$URN$_group-box-top-left,
+.$URN$_group-box-top-right,
+.$URN$_group-box-bottom-left,
+.$URN$_group-box-bottom-right {
+    overflow: hidden;
+}
+.$URN$_group-box-top-right,
+.$URN$_group-box-bottom-right{
+    margin: 0 -12px 0 0;
+}
+
+.$URN$_group-box-top-horizontal,
+.$URN$_group-box-bottom-horizontal {
+    width: expression(this.parentElement.clientWidth);
+    overflow: hidden;
+}
+.$URN$_group-box-left,
+.$URN$_group-box-right{
+    height:  expression(this.parentElement.clientHeight - 6);
+}
+
+/*** ----------------Custom Classes Begin ---------------------------------------------------------------- ***/
+/*  "raised" */
+.$URN$_group-box-top-horizontal-raised,
+.$URN$_group-box-bottom-horizontal-raised {
+    left: 6px;
+    width: expression(this.parentElement.clientWidth);
+}
+.$URN$_group-box-left-raised,
+.$URN$_group-box-right-raised {
+    top: 3px;
+    height: expression(this.parentElement.clientHeight - 6);
+}
+
+/* "title_center" */
+.$URN$_group-box-legend-container-title_center {width: expression(this.parentElement.clientWidth - 6);}
+
+/*  "panel" */
+.$URN$_group-box-top-panel,
+.$URN$_group-box-bottom-panel {width: expression(this.parentElement.clientWidth);}
+.$URN$_group-box-bottom-panel {margin-bottom:-2px;}
+.$URN$_group-box-top-right-panel,
+.$URN$_group-box-bottom-right-panel {margin: 0 -14px 0 0;}
+.$URN$_group-box-right-panel,
+.$URN$_group-box-right-panel {margin: 0 -2px 0 0;}
+.$URN$_group-box-top-horizontal-panel, 
+.$URN$_group-box-bottom-horizontal-panel {width: expression(this.parentElement.clientWidth - 10);}
+.$URN$_group-box-left-panel, 
+.$URN$_group-box-right-panel {height: expression(this.parentElement.clientHeight - 14);}
+.$URN$_group-box-legend-container-panel {width: expression(this.parentElement.clientWidth - 6);}
+.$URN$_group-box-legend-label-panel {width: expression(this.parentElement.clientWidth - 56);}
+
+/*  "rounded" */
+.$URN$_group-box-top-rounded,
+.$URN$_group-box-bottom-rounded {width: expression(this.parentElement.clientWidth);}
+.$URN$_group-box-bottom-rounded {margin-bottom:-2px;}
+.$URN$_group-box-top-right-rounded,
+.$URN$_group-box-bottom-right-rounded {margin: 0 -14px 0 0;}
+.$URN$_group-box-right-rounded,
+.$URN$_group-box-right-rounded {margin: 0 -2px 0 0;}
+.$URN$_group-box-top-horizontal-rounded, 
+.$URN$_group-box-bottom-horizontal-rounded {width: expression(this.parentElement.clientWidth - 26);}
+.$URN$_group-box-left-rounded, 
+.$URN$_group-box-right-rounded {height: expression(this.parentElement.clientHeight - 26);}
+.$URN$_group-box-legend-container-rounded {width: expression(this.parentElement.clientWidth - 1);left:1px;}
+.$URN$_group-box-legend-label-rounded {width: expression(this.parentElement.clientWidth - 14);}
+.$URN$_group-box-background-rounded_raised{background-color: #d6d6d6;}
+.$URN$_group-box-legend-left-rounded,
+.$URN$_group-box-legend-right-rounded,
+.$URN$_group-box-top-left-rounded,
+.$URN$_group-box-top-right-rounded,
+.$URN$_group-box-bottom-left-rounded,
+.$URN$_group-box-bottom-right-rounded {background-image: url(rounded/group_box_ie.png);}
+.$URN$_group-box-legend-label-rounded,
+.$URN$_group-box-top-horizontal-rounded,
+.$URN$_group-box-bottom-horizontal-rounded {background-image:url(rounded/group_box_hrep_ie.png);}
+.$URN$_group-box-left-rounded,
+.$URN$_group-box-right-rounded {background-image: url(rounded/group_box_vrep_ie.png);}
+
+/*** ----------------Custom Classes Ends ---------------------------------------------------------------- ***/

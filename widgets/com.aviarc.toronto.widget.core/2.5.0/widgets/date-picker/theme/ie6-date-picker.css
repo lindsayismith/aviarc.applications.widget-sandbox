@@ -1,0 +1,4 @@
+div.$URN$_date-picker-wrapper .underlay {
+    width: expression(this.parentElement.clientWidth);
+    height: expression(this.parentElement.clientHeight);
+}

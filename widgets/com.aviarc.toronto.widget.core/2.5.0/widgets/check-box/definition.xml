@@ -1,0 +1,23 @@
+<widget name="check-box"
+        factory-class="com.aviarc.framework.toronto.widget.DefaultWidgetProviderFactoryImpl"
+        container-positioning="y"
+        element-validator-class="com.aviarc.framework.toronto.widget.validation.ContainerPositioningElementValidator">
+    <attributes>
+        <attribute name="checked-value" mandatory="n" default="y"/>
+        <attribute name="unchecked-value" mandatory="n" default="n"/>
+        <attribute name="selection-field" mandatory="y" type="field"/>
+        <attribute name="mandatory" default="n"/>
+        <attribute name="enabled" mandatory="n" default="y" type="bool"/>
+        <attribute name="default" type="bool" />
+        <attribute name="height" mandatory="n" default="13"/>
+        <attribute name="width" mandatory="n" default="13"/>
+    </attributes>
+    <includes>
+      <js-include file="CheckBox.js"/>
+      <css-include file="checkbox.css"/>
+	  <msie6-css-include file="ie6-check-box.css"/>
+    </includes>
+    <js-constructor>new YAHOO.com.aviarc.framework.toronto.widget.core.v2_5_0.CheckBox()</js-constructor>
+
+    <!-- The default attribute is used when the bound dataset field doesn't exist, or there is no current row. If the default attribute is not specified and either of the mentioned cases occur, an error is thrown.-->
+</widget>

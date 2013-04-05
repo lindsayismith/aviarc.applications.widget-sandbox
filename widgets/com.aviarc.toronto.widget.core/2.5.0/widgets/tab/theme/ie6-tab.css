@@ -1,0 +1,11 @@
+ul.$URN$_tabset-tablist li span.tab-left,
+ul.$URN$_tabset-tablist li span.tab-right {
+    height: expression(this.parentElement.clientHeight);
+}
+ul.$URN$_tabset-tablist li {
+    /** IE will make it bigger if needed, but without this the widget will be 100% **/
+    width: 10px;
+}
+ul.$URN$_tabset-tablist span.$URN$_inactive-label {
+    width: expression(this.parentElement.clientWidth);
+}

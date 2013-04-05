@@ -1,0 +1,10 @@
+<widget 
+    name="container" 
+    container-positioning="y" 
+    rendered-node-factory="com.aviarc.toronto.widget.core.ContainerRenderedNodeFactory"
+    factory-class="com.aviarc.framework.toronto.widget.DefaultWidgetProviderFactoryImpl">  
+  <includes>
+      <css-include file="container.css"/>
+  </includes>
+  <children allowed="y"/>
+</widget>

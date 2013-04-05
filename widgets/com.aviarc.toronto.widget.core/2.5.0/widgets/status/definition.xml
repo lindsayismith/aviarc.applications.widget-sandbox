@@ -1,0 +1,13 @@
+<widget name="status"
+        factory-class="com.aviarc.framework.toronto.widget.DefaultWidgetProviderFactoryImpl"
+        container-positioning="y">
+    <attributes>
+        <attribute name="visible" mandatory="n" runtime="y" type="bool" default="n"/>
+        <attribute name="text" mandatory="n" runtime="y" type="string" default="Loading..."/>
+    </attributes>
+    <includes>
+        <js-include file="Status.js"/>
+        <css-include file="status.css"/>
+    </includes>
+    <js-constructor>new YAHOO.com.aviarc.framework.toronto.widget.core.v2_5_0.Status()</js-constructor>
+</widget>

@@ -1,0 +1,133 @@
+<?xml version="1.0" ?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.aviarc.components.widgets</groupId>
+    <artifactId>com.aviarc.toronto.widget.core</artifactId>
+    <version>2.5.0-SNAPSHOT</version>
+
+    <name>Aviarc widgets ${widgets.package}:${widgets.version}</name>
+    <url>http://www.aviarc.com</url>
+
+    <parent>
+        <artifactId>core-super-pom</artifactId>
+        <groupId>com.aviarc</groupId>
+        <version>1.9.0</version>
+    </parent>
+
+    <scm>
+        <connection>scm:git:http://git/git-repos/osgi/widgets/com.aviarc.toronto.widget.core.git</connection>
+        <developerConnection>scm:git:ssh://git/data1/git-repos/osgi/widgets/com.aviarc.toronto.widget.core.git</developerConnection>
+        <url>http://git/gitweb/?p=osgi/widgets/aviarc.toronto.widget.core.git;a=summary</url>
+    </scm>
+
+    <properties>
+        <widgets.version>${parsedVersion.majorVersion}.${parsedVersion.minorVersion}.${parsedVersion.incrementalVersion}</widgets.version>
+        <widgets.package>${project.artifactId}</widgets.package>
+
+        <!-- Dependency versions -->
+        <com.aviarc.core-version>1.3.0-SNAPSHOT</com.aviarc.core-version>
+        <com.aviarc.framework-version>1.3.0-SNAPSHOT</com.aviarc.framework-version>
+    </properties>
+
+    <build>
+        <sourceDirectory>${basedir}/src</sourceDirectory>
+
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>build-helper-maven-plugin</artifactId>
+                <version>1.5</version>
+                <executions>
+                    <execution>
+                        <id>parse-version</id>
+                        <goals>
+                            <goal>parse-version</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>com.aviarc.maven.plugins</groupId>
+                <artifactId>add-source-directories-plugin</artifactId>
+                <version>1.0.0</version>
+                <executions>
+                    <execution>
+                        <id>add-source-directories</id>
+                        <phase>generate-sources</phase>
+                        <goals>
+                            <goal>add-source-directories</goal>
+                        </goals>
+                        <configuration>
+                            <baseDirectory>${basedir}</baseDirectory>
+                            <includes>
+                                <include>widgets/**/src</include>
+                            </includes>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <version>2.2</version>
+                <configuration>
+                    <descriptors>
+                        <descriptor>maven/assembly.xml</descriptor>
+                    </descriptors>
+                    <appendAssemblyId>false</appendAssemblyId>
+                    <archive>
+                        <manifestEntries>
+                            <Aviarc-Packaging-Scheme>1.0</Aviarc-Packaging-Scheme>
+                        </manifestEntries>
+                        <manifestSections>
+                            <manifestSection>
+                                <name>metadata</name>
+                                <manifestEntries>
+                                    <Component>urn:aviarc:widget:${widgets.package}:${widgets.version}</Component>
+                                </manifestEntries>
+                            </manifestSection>
+                        </manifestSections>
+                    </archive>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>make-assembly</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+    <dependencies>
+       <dependency>
+           <groupId>dom4j</groupId>
+           <artifactId>com.aviarc.dom4j</artifactId>
+           <version>1.6.1-006</version>
+           <scope>provided</scope>
+       </dependency>
+       <dependency>
+           <groupId>com.aviarc</groupId>
+           <artifactId>com.aviarc.core</artifactId>
+           <version>${com.aviarc.core-version}</version>
+           <scope>provided</scope>
+       </dependency>
+       <dependency>
+           <groupId>com.aviarc</groupId>
+           <artifactId>com.aviarc.framework</artifactId>
+           <version>${com.aviarc.framework-version}</version>
+           <scope>provided</scope>
+       </dependency>
+       <dependency>
+          <groupId>com.google.code.findbugs</groupId>
+          <artifactId>annotations</artifactId>
+          <version>1.3.9</version>
+          <scope>compile</scope>
+          <optional>true</optional>
+      </dependency>
+  </dependencies>
+
+</project>

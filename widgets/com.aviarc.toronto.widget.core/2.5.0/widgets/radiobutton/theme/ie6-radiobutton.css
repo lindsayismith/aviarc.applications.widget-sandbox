@@ -1,0 +1,23 @@
+.$URN$_radiobutton {}
+/*** ---------------- Custom Classes Begin --------------------------------------------------------------- ***/
+/* "right" */
+.$URN$_radiobutton-right .radiobutton-inner {
+	right:-3px;
+}
+
+/* "top_right" */
+.$URN$_radiobutton-top_right .radiobutton-inner {
+	right:-3px;
+}
+
+/* "bottom_right" */
+.$URN$_radiobutton-bottom_right .radiobutton-inner {
+	right:-3px;
+	bottom:-3px;
+}
+
+/* "bottom_left" */
+.$URN$_radiobutton-bottom_left .radiobutton-inner {
+	bottom:-3px;
+}
+/*** ---------------- Custom Classes Ends ---------------------------------------------------------------- ***/

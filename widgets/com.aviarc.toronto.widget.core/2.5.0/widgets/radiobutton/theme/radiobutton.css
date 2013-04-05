@@ -1,0 +1,132 @@
+.$URN$_radiobutton {
+    position: absolute;
+}
+
+.$URN$_radiobutton .radiobutton-outer {
+	top: 50%;
+	bottom: 50%;
+	left: 50%;
+	right: 50%;
+    position: absolute;
+}
+
+.$URN$_radiobutton .radiobutton-inner {
+	height: 12px;
+	top: -6px;
+	left: -6px;
+	width: 12px;
+    position: absolute;
+}
+.$URN$_radiobutton .radiobutton-inner {
+    *margin:-4px 0 0 -4px;
+}
+.com-aviarc-toronto-widget-core_2-1-1_radiobutton-invalid .radiobutton-inner {
+    background: red;
+}
+
+/*** ---------------- Custom Classes Begin ---------------------------------------------------------------- ***/
+/* Radiobutton container position options
+   The following classes will change the alignment of the radiobutton input element within the container.
+   Note: By default, the check-box is centered in the widget container. */
+
+/* "top_left" */
+.$URN$_radiobutton-top_left .radiobutton-outer {
+	top:0;
+	left:0;
+	right:auto;
+	bottom:auto;
+}
+.$URN$_radiobutton-top_left .radiobutton-inner {
+	top:0;
+	left:0;
+}
+
+/* "top" */
+.$URN$_radiobutton-top .radiobutton-outer {
+	top:0;
+	bottom:auto;
+}
+.$URN$_radiobutton-top .radiobutton-inner {top:0;}
+
+/* "top_right" */
+.$URN$_radiobutton-top_right .radiobutton-outer {
+	top:0;
+	left:auto;
+	right:0;
+	bottom:auto;
+}
+.$URN$_radiobutton-top_right .radiobutton-inner {
+	top:0;
+	right:0;
+	left:auto;
+}
+/* IE7 styles for "top_right" */
+.$URN$_radiobutton-top_right .radiobutton-inner {
+	*right:4px;
+}
+
+/* "left" */
+.$URN$_radiobutton-left .radiobutton-outer {
+	left:0;
+	right:auto;
+}
+.$URN$_radiobutton-left .radiobutton-inner {left:0;}
+
+/* "right" */
+.$URN$_radiobutton-right .radiobutton-outer {
+	left:auto;
+	right:0;
+}
+.$URN$_radiobutton-right .radiobutton-inner {
+	left:auto;
+	right:0;
+}
+/* IE7 styles for "right" */
+.$URN$_radiobutton-right .radiobutton-inner {
+	*right:4px;
+}
+
+/* "bottom_left" */
+.$URN$_radiobutton-bottom_left .radiobutton-outer {
+	top:auto;
+	left:0;
+	right:auto;
+	bottom:0;
+}
+.$URN$_radiobutton-bottom_left .radiobutton-inner {
+	top:auto;
+	left:0;
+	right:auto;
+	bottom:1px;
+}
+/* IE7 styles for "bottom_left" */
+.$URN$_radiobutton-bottom_left .radiobutton-inner {
+	*bottom:5px;
+}
+
+/* "bottom" */
+.$URN$_radiobutton-bottom .radiobutton-outer {
+	bottom:0;
+	top:auto;
+}
+.$URN$_radiobutton-bottom .radiobutton-inner {top:-13px;}
+
+/* "bottom_right" */
+.$URN$_radiobutton-bottom_right .radiobutton-outer {
+	top:auto;
+	left:auto;
+	right:0;
+	bottom:0;
+}
+.$URN$_radiobutton-bottom_right .radiobutton-inner {
+	top:auto;
+	right:0;
+	left:auto;
+	bottom:1px;
+}
+/* IE7 styles for "bottom_right" */
+.$URN$_radiobutton-bottom_right .radiobutton-inner {
+	*right:4px;
+	*bottom:5px;
+}
+/*** ---------------- Custom Classes Ends ---------------------------------------------------------------- ***/

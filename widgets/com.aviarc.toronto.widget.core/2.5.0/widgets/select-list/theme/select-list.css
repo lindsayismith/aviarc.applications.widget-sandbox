@@ -1,0 +1,68 @@
+.$URN$_select-list {
+    position: absolute;
+}
+.$URN$_select-list select {
+    width: 100%;
+    height: 100%;
+    background: white;
+}
+/* this is UGLY but gets the point across */
+.$URN$_select-list-invalid select {
+    background: red;
+    color: white;
+}
+
+/* mandatory */
+.$URN$_select-list .select-list-mandatory {
+	display:none;
+	text-indent:-9999px;
+} 
+.$URN$_select-list-mandatory select {
+	border-width:2px;
+	border-color:#dc8585;
+}
+.$URN$_select-list-mandatory .select-list-mandatory {
+	display: block;
+	position:absolute;
+	top:0;
+	right:-19px;
+	height:100%;
+	width:16px;
+	text-indent:-9999px;
+	margin:-1px 0;
+	background:url(select-list_mandatory.png) 0 0 no-repeat;
+	cursor:help;
+}
+
+/*** ---------------- Custom Classes Begin ---------------------------------------------------------------- ***/
+
+/* "disabled" */
+.$URN$_select-list-disabled select {
+	background:#ddd;
+	border-color:#777;
+}
+
+/* "mandatory_highlight" */
+.$URN$_select-list-mandatory_highlight select {
+	background-color:#ffefd9;
+}
+
+/* "mandatory_no_asterisk" */
+.$URN$_select-list-mandatory_no_asterisk .select-list-mandatory {
+	display:none;
+}
+
+/* "mandatory_left" */
+.$URN$_select-list-mandatory_left .select-list-mandatory {
+	right:auto;
+	left:-19px;
+}
+
+/* "mandatory_raised" */
+.$URN$_select-list-mandatory_raised .select-list-mandatory {
+	background:#e4e4e4 url(mandatory_raised/select_list_mandatory.png) 0 0 no-repeat;
+	border:1px solid #ebc3c3;
+	border-bottom-color:#d88181;
+	border-top-color:#f5e9e9;
+}
+/*** ---------------- Custom Classes End ---------------------------------------------------------------- ***/

@@ -1,0 +1,63 @@
+.$URN$_button .button-top-middle,
+.$URN$_button .button-bottom-middle {width: expression(this.parentElement.clientWidth - 34);}
+
+/*** ----------------Custom Classes Begin ---------------------------------------------------------------- ***/
+/* These are the missing are neccessary extra styles needed by ie6 only the rest f the custom class exsists in the widgets main stylesheet */
+
+
+/* "hover_outline" -  the following is the ie6 and ie7 only solution - need to move this to ie6 and ie7 stylesheets respectively 
+	Note - this class can only be used together with the "hyperlink" custom class while using ie6 and ie7 */
+.$URN$_button-hyperlink-hover_outline a:hover .button-container-inner,
+.$URN$_button-hyperlink-hover_outline a:focus .button-container-inner,
+.$URN$_button-hyperlink-hover_outline a:active .button-container-inner {border:0;}
+.$URN$_button-hyperlink-hover_outline a:hover .button-top-left,
+.$URN$_button-hyperlink-hover_outline a:hover .button-top-right,
+.$URN$_button-hyperlink-hover_outline a:hover .button-bottom-left,
+.$URN$_button-hyperlink-hover_outline a:hover .button-bottom-right,
+.$URN$_button-hyperlink-hover_outline a:hover .button-top-middle,
+.$URN$_button-hyperlink-hover_outline a:hover .button-bottom-middle {
+	margin:0;
+	border-style:dotted;
+	border-color:#ddd;
+	border-width:0;
+}
+.$URN$_button-top-left-hyperlink-hover_outline a:hover .button-top-left,
+.$URN$_button-top-left-hyperlink-hover_outline a:focus .button-top-left,
+.$URN$_button-top-left-hyperlink-hover_outline a:active .button-top-left {
+	border-top:1px;
+	border-left:1px;
+}
+.$URN$_button-top-left-hyperlink-hover_outline a:hover .button-top-right,
+.$URN$_button-top-left-hyperlink-hover_outline a:focus .button-top-right,
+.$URN$_button-top-left-hyperlink-hover_outline a:active .button-top-right {
+	border-top:1px;
+	border-right:1px;
+}
+.$URN$_button-top-left-hyperlink-hover_outline a:hover .button-bottom-left,
+.$URN$_button-top-left-hyperlink-hover_outline a:focus .button-bottom-left,
+.$URN$_button-top-left-hyperlink-hover_outline a:active .button-bottom-left {
+	border-bottom:1px;
+	border-left:1px;
+}
+.$URN$_button-top-left-hyperlink-hover_outline a:hover .button-bottom-right,
+.$URN$_button-top-left-hyperlink-hover_outline a:focus .button-bottom-left,
+.$URN$_button-top-left-hyperlink-hover_outline a:active .button-bottom-left {
+	border-bottom:1px;
+	border-right:1px;
+}
+.$URN$_button-top-left-hyperlink-hover_outline a:hover .button-top-middle,
+.$URN$_button-top-left-hyperlink-hover_outline a:focus .button-top-middle,
+.$URN$_button-top-left-hyperlink-hover_outline a:active .button-top-middle {border-top:1px;}
+.$URN$_button-top-left-hyperlink-hover_outline a:hover .button-bottom-middle,
+.$URN$_button-top-left-hyperlink-hover_outline a:focus .button-bottom-middle,
+.$URN$_button-top-left-hyperlink-hover_outline a:active .button-bottom-middle {border-bottom:1px;}
+
+/* "label_green" */
+.$URN$_button-top-left-hyperlink-label_green a:hover {
+	color:#33f;
+	text-decoration:underline;
+}
+
+
+
+/*** ----------------Custom Classes End ---------------------------------------------------------------- ***/

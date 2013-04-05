@@ -1,0 +1,24 @@
+.$URN$_checkbox {}
+/*** ---------------- Custom Classes Begin ---------------------------------------------------------------- ***/
+/* "top_right" */
+.$URN$_checkbox-top_right .checkbox-inner {
+	right:-3px;
+}
+
+/* "right" */
+.$URN$_checkbox-right .checkbox-inner {
+	right:-3px;
+}
+
+/* "bottom_left" */
+.$URN$_checkbox-bottom_left .checkbox-inner {
+	bottom:-3px;
+}
+
+/* "bottom_right" */
+.$URN$_checkbox-bottom_right .checkbox-inner {
+	bottom:-3px;
+	right:-3px;
+}
+
+/*** ---------------- Custom Classes Ends ---------------------------------------------------------------- ***/

@@ -1,0 +1,53 @@
+<widget name="button"
+    factory-class="com.aviarc.framework.toronto.widget.DefaultWidgetProviderFactoryImpl"
+    rendered-node-factory="com.aviarc.toronto.widget.core.ButtonRenderedNodeFactory"
+    element-validator-class="com.aviarc.toronto.widget.core.validation.ButtonElementValidator"
+    container-positioning="y">
+    <attributes>
+        <attribute name="name" type="name" mandatory="n"/>
+        <attribute name="validate" mandatory="n" default="y"/>
+        <attribute name="server-validate" mandatory="n" />
+        <attribute name="enabled" mandatory="n" default="y"/>
+        <attribute name="enabled-if-dataset" mandatory="n" type="dataset"/>
+        <attribute name="disabled-if-dataset" mandatory="n" type="dataset"/>
+        <attribute name="visible-if-dataset" mandatory="n" type="dataset"/>
+        <attribute name="invisible-if-dataset" mandatory="n" type="dataset"/>
+        <attribute name="class" mandatory="n"/>
+        <attribute name="action" mandatory="n" type="action"/>
+        <attribute name="auto-refresh" mandatory="n" type="bool" default="y"/>
+        <attribute name="label" mandatory="y"/>
+        <attribute name="confirm" mandatory="n"/>
+        <attribute name="focus" mandatory="n"/>
+        <attribute name="show-validation-alert" mandatory="n" default="y"/>
+    </attributes>
+    <sub-elements>
+        <sub-element name="validate">
+            <attributes>
+                <attribute name="widget" mandatory="n" type="nameref" />
+                <attribute name="dataset" mandatory="n"/>
+            </attributes>
+        </sub-element>
+
+        <sub-element name="validation">
+            <sub-elements>
+                <sub-element name="include">
+                    <attributes>
+                        <attribute name="widget" mandatory="n" type="nameref" />
+                        <attribute name="dataset" mandatory="n"/>
+                    </attributes>
+                </sub-element>
+                <sub-element name="exclude">
+                    <attributes>
+                        <attribute name="widget" mandatory="n" type="nameref" />
+                        <attribute name="dataset" mandatory="n"/>
+                    </attributes>
+                </sub-element>
+            </sub-elements>
+        </sub-element>
+    </sub-elements>
+  <includes>
+    <js-include file="Button.js"/>
+    <css-include file="button.css"/>
+    <msie6-css-include file="ie6-button.css"/>
+  </includes>
+</widget>

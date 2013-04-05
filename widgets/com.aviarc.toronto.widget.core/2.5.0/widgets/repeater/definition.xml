@@ -1,0 +1,18 @@
+<widget name="repeater" 
+        factory-class="com.aviarc.framework.toronto.widget.DefaultWidgetProviderFactoryImpl"
+        rendered-node-factory="com.aviarc.toronto.widget.core.RepeaterFactory"
+        container-positioning="n">
+    <attributes>
+        <attribute name="dataset" mandatory="y" type="dataset" />
+        <attribute name="visible" mandatory="n" default="y"/>
+        <attribute name="show-timer" mandatory="n" default="y"/>
+        <attribute name="auto-refresh" mandatory="n" type="boolean" default="y" />
+        <attribute name="scroll-to-new" mandatory="n" type="boolean" default="y" />
+    </attributes>
+    <includes>
+        <js-include file="Repeater.js" />        
+        <js-include file="get.js" />
+    </includes>
+    <children allowed="y"/>
+    <js-constructor>new YAHOO.com.aviarc.framework.toronto.widget.core.v2_5_0.Repeater()</js-constructor>
+</widget>
