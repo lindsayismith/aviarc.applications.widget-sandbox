@@ -1,0 +1,9 @@
+<workflow url="/browse-widgets">
+    <dataset name="all-namespaces" databroker="widget-namespaces" query="get-all-widget-namespaces"/>
+    <dataset name="examples" databroker="widget-namespace-examples" query="get-widget-namespace-examples">
+        <param name="urn" value="{$all-namespaces.urn}"/>        
+    </dataset>
+    <dataset name="compile-results"/>
+    
+    <show-screen name="widget-browser"/>
+</workflow>

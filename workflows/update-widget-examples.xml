@@ -1,0 +1,5 @@
+<workflow>
+    <refresh-dataset name="examples" databroker="widget-namespace-examples" query="get-widget-namespace-examples">
+        <param name="urn" value="{$all-namespaces.urn}"/>        
+    </refresh-dataset>
+</workflow>

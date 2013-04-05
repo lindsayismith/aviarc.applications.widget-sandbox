@@ -1,5 +1,5 @@
 <workflow>
-    <dataset name="examples" databroker="examples" query="get-all"/>
+    <dataset name="examples" databroker="examples-xml-reader" query="get-all"/>
     <!--
     <create-row dataset="test-xml"/>
     <set-field field="test-xml.xml" value="&lt;button width=&quot;100&quot; height=&quot;26&quot; left=&quot;176&quot; top=&quot;111&quot; label=&quot;string&quot;/&gt;"/>

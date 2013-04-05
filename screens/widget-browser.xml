@@ -1,0 +1,47 @@
+<screen xmlns:action="urn:aviarc:widget:com.aviarc.toronto.widget.core.action:1" xmlns:app="urn:aviarc:widget:application">
+    <record-table width="890" height="103" left="44" top="24" dataset="all-namespaces">
+        <column width="90" display-field="urn" />
+        <column width="10" display-field="location" />        
+    </record-table>
+    
+    <action:when dataset-event="all-namespaces.onCurrentRowChanged">
+        <action:call-ajax-workflow name="update-widget-examples">
+            
+        </action:call-ajax-workflow>
+    </action:when>
+    <app:screen-fragment-renderer name="screen-fragment" xml="{$examples.xml}" width="690" height="460" left="835" top="394" compile-results-dataset="compile-results">
+        
+    </app:screen-fragment-renderer>
+    
+    <action:when dataset-event="examples.onCurrentRowChanged">
+        <app:rerender widget="screen-fragment" />
+    </action:when>
+    
+    <record-table width="770" height="150" left="45" top="704" dataset="compile-results">
+        <column width="5" display-field="type" header="Type" />
+        <column width="80" display-field="message" header="message" />
+        <column width="20" display-field="position" header="Position" />
+    </record-table>    
+        
+    <group-box width="1480" height="230" left="45" top="144" class="raised">
+        <record-table width="620" height="170" left="26" top="20" dataset="examples">
+            <column width="0" display-field="title" header="Title" />
+        </record-table>
+        <dynamic-text width="760" height="160" left="683" top="26" field="examples.description" />
+        <button width="100" height="26" left="1360" top="190" label="Save" action="save-examples">
+            
+        </button>
+        
+    </group-box>
+    <group-box width="770" height="290" left="45" top="394" title="Source XML" class="raised">
+        <text-edit left="20" top="20" field="examples.xml" multi-line="y" right="20" bottom="47" />
+        <button label="Reload" right="24" width="130" bottom="10" height="26">
+            <action:when event="onclick">
+                <app:rerender widget="screen-fragment" />
+            </action:when>
+        </button>
+        
+    </group-box>
+    
+    
+</screen>
